@@ -33,11 +33,23 @@ for (let i = 0; i<arr.length; i++) {
     		console.log('Yes')
     		break}}
 
+let res = 0
+for (let i=0; i<arr.length; i++) {
+  res += arr[i]
+}
+  console.log(res)
+}
 
 let res = 0
 for (let i=0; i<arr.length; i++) {
-  let a = arr[i])
-  res = res+a
+  res += arr[i]
+ }
+ console.log(res)
 }
-  return res
+
+let res = 0
+for (let i=0; i<arr.length; i++) {
+  res += arr[i]
+}
+  console.log(res/arr.length)
 }

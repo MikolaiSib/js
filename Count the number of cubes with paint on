@@ -1,0 +1,14 @@
+function countSquares(cuts){
+  if(cuts==0){
+    return 1
+  }
+  if(cuts==1){
+    return 8
+  }
+  if(cuts==2){
+    return 26
+  }
+  let countPart = cuts + 1
+  return countPart*countPart*2 +countPart*2*(countPart-2)+(countPart-2)*2*(countPart-2)
+  
+}

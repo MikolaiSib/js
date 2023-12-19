@@ -1,0 +1,4 @@
+function mango(quantity, price){
+  let moneyCount = Math.ceil(quantity/3*2)
+  return moneyCount*price
+}

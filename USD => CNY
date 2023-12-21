@@ -1,0 +1,10 @@
+function usdcny(usd) {
+  let yuan = usd*6.75
+  if(yuan === Math.ceil(yuan)){
+    return yuan +'.00 Chinese Yuan'
+  }
+  if(yuan*10 === Math.ceil(yuan*10)){
+    return yuan +'0 Chinese Yuan'
+  }
+  return yuan +' Chinese Yuan'
+}

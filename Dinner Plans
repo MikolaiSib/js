@@ -1,0 +1,19 @@
+function commonGround(s1, s2){
+  let res = ''
+  let arr1 = s1.split(' ')
+  let arr2 = s2.split(' ')
+
+  for(let i = 0; i<arr2.length; i++){
+    for(let j = 0; j<arr1.length; j++){
+      if(arr2[i] === arr1[j]){
+        res += arr2[i]+' '
+      }
+    }
+  }
+  
+  if(res){
+      return res.slice(0, res.length-1)
+  }
+// your code here
+  return 'death';
+}

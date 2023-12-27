@@ -1,0 +1,7 @@
+function ghostBusters(building) {
+  let res = building.split(' ').join('')
+  if(building.length === res.length){
+    return "You just wanted my autograph didn't you?"
+  }
+  return res
+}

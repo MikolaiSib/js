@@ -1,0 +1,12 @@
+function last(x){
+  return x.split(' ').sort(function (a, b) {
+  if (a.slice(a.length-1) > b.slice(b.length-1)) {
+    return 1;
+  }
+  if (a.slice(a.length-1) < b.slice(b.length-1)) {
+    return -1;
+  }
+  // a должно быть равным b
+  return 0;
+});
+}

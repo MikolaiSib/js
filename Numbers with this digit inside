@@ -1,0 +1,14 @@
+function numbersWithDigitInside(x, d) {
+  let resArr = []
+  for(let i = 1; i <= x; i++){
+    if(i.toString().includes(d.toString())){
+      resArr.push(i)
+    }
+  }
+  let sum = resArr.reduce((acc, el) => acc+el, 0)
+  let product = resArr.reduce((acc, el) => acc*el, 1)
+  if(resArr.length<1){
+    return [0, 0, 0]
+  }
+  return [resArr.length, sum , product];
+}

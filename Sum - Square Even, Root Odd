@@ -1,0 +1,4 @@
+const sumSquareEvenRootOdd = ns => {
+  return +ns.map(e => e%2 ? Math.sqrt(e) : e*e).reduce((acc, el) => acc+el, 0).toFixed(2)
+  // your code goes here
+};

@@ -1,0 +1,13 @@
+function minMinMax(array) {
+  array.sort((a, b) => a - b)
+  let arr = [...new Set(array)]
+  let minimumAbsent 
+  for(let i = 0; i<arr.length; i++){
+    if(arr[i] !== arr[i+1]-1){
+      minimumAbsent = arr[i]+1
+      break
+    }
+  }
+  return [array[0], minimumAbsent, array[array.length-1]]
+  // solution goes here!
+}

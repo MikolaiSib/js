@@ -1,0 +1,14 @@
+var isSquare = function(arr){
+  if(arr.length === 0){
+    return undefined
+  }
+  let temp
+  for(let i = 0; i < arr.length; i++){
+    temp = arr[i]**0.5
+    if(temp !== Math.ceil(temp)){
+      return false 
+    }
+  }
+  return true
+  //Your code here
+}

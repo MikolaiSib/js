@@ -1,0 +1,32 @@
+function twentyOne(card1, card2, card3) {
+  let cards = [card1, card2, card3]
+  let resSum = 0
+  for( let i = 0; i < 3; i++){
+    let temp = cards[i].slice(0, cards[i].length-1)
+    if(temp === 'A'){
+      resSum += 11
+    }
+    else if(temp === 'J'){
+      resSum += 2
+    }
+    else if(temp === 'Q'){
+      resSum += 3
+    }
+    else if(temp === 'K'){
+      resSum += 4
+    }
+    else {
+      resSum += +temp
+    }
+    
+
+  }
+  if(resSum > 21){
+    return 'more'
+  }
+  if(resSum < 21){
+    return 'less'
+  }
+  return 'twenty-one'
+  // good luck
+}

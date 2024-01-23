@@ -1,0 +1,14 @@
+function longestPossible(playback) {
+  let n = 0
+  let res = ''
+  for(let i = 0; i < songs.length; i++){
+    let tempTime = songs[i].playback.split(':').map(e => +e)
+    let tempSumTime = tempTime[0]*60 + tempTime[1]
+    if(tempSumTime < playback && n < tempSumTime){
+      n = tempSumTime
+      res = songs[i].title
+    }
+  }
+  return res ? res :false
+  // Your Code
+}

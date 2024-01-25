@@ -1,0 +1,12 @@
+function magicSum(numbers) {
+  //return numbers
+  let sum = 0
+  for(let i = 0; i < numbers.length; i++){
+    let arr = numbers[i].toString().split('')
+    if(numbers[i]%2 && arr.includes('3')){
+      sum += numbers[i]
+    }
+  }
+  return sum
+  // TODO: Program Me
+}

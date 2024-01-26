@@ -1,0 +1,14 @@
+function sortItOut(array){
+  let arr1 = []
+  let arr2 = []
+  for(let i = 0; i < array.length; i++){
+    let temp = Math.floor(array[i])
+    if(temp%2){
+      arr1.push(array[i])
+    } else {
+      arr2.push(array[i])
+    }
+  }
+  return [...arr1.sort((a, b) => a - b), ...arr2.sort((a, b) => b - a) ]
+//Write your own code!
+}

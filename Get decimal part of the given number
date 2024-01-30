@@ -1,0 +1,8 @@
+function getDecimal(n){
+  let num = n
+  if(n < 0){
+    num *= -1
+  }
+  let floor = Math.floor(num)
+  return num - floor 
+}

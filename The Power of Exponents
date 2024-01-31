@@ -1,0 +1,19 @@
+function power(base, exponent){
+  if(exponent === 0){
+    return 1
+  }
+  
+  let res = base
+  if(exponent>0){
+    for(let i = 1; i < exponent; i++){
+    res *= base
+    }
+    return res
+  }
+  exponent *= -1
+  for(let i = 1; i < exponent; i++){
+    res *= base
+  }
+  return 1/res
+  // ...
+}

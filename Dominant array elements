@@ -1,0 +1,20 @@
+function solve(arr) {
+  let res = []
+  let toggle = false
+  for(let i = 0; i < arr.length; i++){
+    for(let j = i; j < arr.length; j++){
+      if(arr[i] <= arr[j+1]){
+        toggle = true
+        break
+      } else {
+        toggle = false
+      }
+    }
+    if(toggle){
+      continue
+    }
+    res.push(arr[i])
+  }
+  return res
+  // TODO
+}

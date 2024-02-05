@@ -1,0 +1,13 @@
+function riders(stations) {
+  let count = 0
+  let temp = 0
+  for(let i = 0; i < stations.length; i++){
+    if(temp + stations[i] > 100){
+      count += 1
+      temp = 0
+    }
+    temp += stations[i]
+  }
+  // Your code here!
+  return count + 1 
+}

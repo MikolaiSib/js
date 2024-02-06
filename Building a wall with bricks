@@ -1,0 +1,21 @@
+const calculateBricksCount=(width,height)=>{
+  let l = 0
+  let ms = 0
+  let countBricks = width/60
+  let countFor = height/5
+  
+  for(let i = 0; i < countFor; i++){
+    if(i%3 === 0){
+      l += countBricks
+    } else {
+      l += countBricks -1
+      ms += 1
+    }
+  }
+
+if(ms === 0){
+  return countBricks +  'L'
+}
+
+return l +  'L' + ms + 'M' + ms +'S' //'21L6M6S'
+}

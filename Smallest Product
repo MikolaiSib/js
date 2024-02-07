@@ -1,0 +1,13 @@
+function smallestProduct(arr) {
+  let res = 99999999
+  let temp
+  for(let i = 0; i < arr.length; i++){
+    temp = arr[i].reduce((acc,el)=> acc*el, 1)
+    if(res > temp){
+      res = temp
+    }
+  }
+  return res
+ // Code goes here
+ 
+ }

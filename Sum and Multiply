@@ -1,0 +1,15 @@
+var sumAndMultiply = function(sum, multiply) {
+  if(sum === 0 || multiply === 0){
+    return [multiply, sum]
+  }
+  let res = []
+  for(let i = 0; i < multiply; i++){
+    if(multiply === i * (sum-i)){
+      res.push(i)
+      res.push(sum-i)
+      break
+    }
+  }
+  return res.length === 0 ? null : res
+    // write your code here
+}

@@ -1,0 +1,16 @@
+function isInMiddle(seq) {
+  if(seq.length%2){
+    if(seq.slice(seq.length/2-1, seq.length/2+2) === 'abc'){
+      return true
+    }
+    return false
+  } 
+  if(seq.slice(seq.length/2-1, seq.length/2+2) === 'abc'){
+      return true
+    }
+  if(seq.slice(seq.length/2-2, seq.length/2+1) === 'abc'){
+      return true
+    }
+  return false
+  // your goes below 
+}

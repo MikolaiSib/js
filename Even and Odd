@@ -1,0 +1,14 @@
+function evenAndOdd(num){
+  let ne = ''
+  let no = ''
+  let str = num.toString()
+  for(let i = 0; i< str.length; i++){
+    if(Number(str[i])%2){
+      no += str[i]
+    } else {
+      ne += str[i]
+    }
+  }
+  // your code here
+  return [Number(ne), Number(no)];
+}

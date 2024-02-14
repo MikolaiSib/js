@@ -1,0 +1,19 @@
+function add(num1, num2) {
+  let res = ''
+  let str1 = num1.toString().split('').reverse().join('')
+  let str2 = num2.toString().split('').reverse().join('')
+  if(str1.length > str2.length){
+    str2 = str2.padEnd(str1.length, 0);
+  }
+  if(str1.length < str2.length){
+    str1 = str1.padEnd(str2.length, 0);
+
+  }
+  let temp
+  for(let i = 0; i < str1.length; i++){
+    temp = Number(str1[i]) + Number(str2[i])
+    res = temp.toString() + res
+  }  
+
+  return Number(res)
+}

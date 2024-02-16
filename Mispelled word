@@ -1,0 +1,17 @@
+let mispelled = function(word1, word2){
+  let dif = (w1, w2) => {
+    let len = w1.length < w2.length ? w2.length : w1.length
+    let count = 0
+    for(let i = 0; i < len; i++){
+      if(w1[i] !== w2[i]){
+        count += 1
+      }
+    }
+    return count > 1 ? false : true
+  }
+  
+  let rWord1 = word1.split('').reverse().join('')
+  let rWord2 = word2.split('').reverse().join('')
+
+  return dif(word1, word2) || dif(rWord1, rWord2)
+}

@@ -1,0 +1,10 @@
+function manageMoney(cash,expenses,rate) {
+  let res = cash
+  for(let i = 1; i <= 12; i++){
+    res = res * rate / 100 + res - expenses
+    if(res < 0){
+      return  "You ran out of money after " + (i - 1) + " months"
+    }
+  }
+  return "You still have $" + res.toFixed(2)
+}

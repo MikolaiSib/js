@@ -1,0 +1,13 @@
+function leastLarger(a,i) {
+  let num = 99999
+  let res = -1
+  for(let j = 0; j < a.length; j++){
+    if(a[i]<a[j]){
+      if(num > a[j]){
+        num = a[j]
+        res = j
+      }
+    }
+  }
+  return res;
+}

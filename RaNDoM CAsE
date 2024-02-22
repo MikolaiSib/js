@@ -1,0 +1,14 @@
+function randomCase(x) {
+  let resStr = ''
+  let count = 0
+  for(let i = 0; i < x.length; i++){
+    let random = Math.round(Math.random()*2) - 1
+    if(random){
+      resStr+=x[i].toUpperCase()
+    } else {
+      resStr+=x[i].toLowerCase()
+    }
+  }
+  return resStr
+  // Code your solution here
+}

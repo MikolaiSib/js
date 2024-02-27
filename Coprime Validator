@@ -1,0 +1,21 @@
+function isCoprime(x, y) {
+  let min = Math.min(x, y)
+  let max = Math.max(x, y)
+  let arrMin = []
+  let res = []
+  for(let i = 1; i <= min; i++){
+    if(min%i === 0){
+      arrMin.push(i)
+    }
+  }
+  for(let i = 0; i < arrMin.length; i++){
+    if(max % arrMin[i] === 0){
+      res.push(i)
+    }
+  }
+  if(res.length === 1){
+    return true
+  }
+  return false
+  // your code here
+}

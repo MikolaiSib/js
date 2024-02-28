@@ -1,0 +1,10 @@
+function gimmeTheLetters(sp) {
+  if(sp[0] === sp[2]){
+    return sp[0]
+  }
+  let arr = []
+  for(let i = sp[0].charCodeAt(0); i <= sp[2].charCodeAt(0) ; i++){
+    arr.push(i)
+  }
+  return String.fromCharCode(...arr);
+}

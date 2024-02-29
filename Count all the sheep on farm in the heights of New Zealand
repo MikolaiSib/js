@@ -1,0 +1,13 @@
+function lostSheep(friday,saturday,total){
+  if( saturday.length === 0 && friday.length === 0){
+    return total 
+  }
+  if(friday.length === 0 ){
+    return total  - saturday.reduce((acc, el) => acc+el)
+  }
+  if( saturday.length === 0 ){
+    return total  - friday.reduce((acc, el) => acc+el)
+  }
+  return total - [...friday, ...saturday].reduce((acc, el) => acc+el)
+  //your code here
+}

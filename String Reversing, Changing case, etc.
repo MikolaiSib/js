@@ -1,0 +1,30 @@
+function reverseAndMirror(s1,s2) {
+  let res1 = ''
+  let res2 = ''
+  let res3 = ''
+  for(let i = s2.length - 1; i >= 0; i--){
+    if(s2[i] === s2[i].toLowerCase()){
+      res1 += s2[i].toUpperCase()
+    }
+    else if(s2[i] === s2[i].toUpperCase()){
+      res1 += s2[i].toLowerCase()
+    }
+  }
+  for(let i = s1.length - 1; i >= 0; i--){
+    if(s1[i] === s1[i].toLowerCase()){
+      res2 += s1[i].toUpperCase()
+    }
+    else if(s1[i] === s1[i].toUpperCase()){
+      res2 += s1[i].toLowerCase()
+    }
+  }
+  for(let i = 0; i < s1.length; i++){
+    if(s1[i] === s1[i].toLowerCase()){
+      res3 += s1[i].toUpperCase()
+    }
+    else if(s1[i] === s1[i].toUpperCase()){
+      res3 += s1[i].toLowerCase()
+    }
+  }
+  return res1 + "@@@" + res2 + res3;
+}

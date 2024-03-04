@@ -1,0 +1,14 @@
+function meanVsMedian(numbers) {
+  let avg = numbers.reduce((acc, el) => acc+el)/numbers.length
+  numbers.sort((a, b) => a- b)
+  let m = numbers[numbers.length/2-0.5]
+  if(avg > m){
+    return 'mean'
+  }
+  if(avg < m){
+    return 'median'
+  }
+  if(avg === m){
+    return 'same'
+  }
+}

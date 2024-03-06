@@ -1,0 +1,14 @@
+function menFromBoys(arr){
+  let arrNoDubl = [...new Set(arr)]
+  let res1 = []
+  let res2 = []
+  for(let i = 0; i < arrNoDubl.length; i++){
+    if(arrNoDubl[i]%2 === 0){
+      res1.push(arrNoDubl[i])
+    } else {
+      res2.push(arrNoDubl[i])
+    }
+  }
+  return [...res1.sort((a, b) => a -b), ...res2.sort((a, b) => b -a)]
+  //your code here
+}

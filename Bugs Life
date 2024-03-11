@@ -1,0 +1,5 @@
+function shortestDistance(a, b, c) {
+  let res = [a, b, c].sort((x, y) => x - y)
+  return ((res[0] + res[1])**2 + res[2]**2)**0.5
+  // Your code here
+}

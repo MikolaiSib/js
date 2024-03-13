@@ -1,0 +1,10 @@
+Array.prototype.remove_ = function(integer_list, values_list){
+  let arr = []
+  for(let i = 0; i < integer_list.length; i++){
+    if(!(values_list.includes(integer_list[i]))){
+      arr.push(integer_list[i])
+    }
+  }
+  return arr
+  //your code here
+}

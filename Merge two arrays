@@ -1,0 +1,10 @@
+function mergeArrays(a, b) {
+  let arrMax = a.length > b.length ? a : b
+  let res = []
+  for(let i = 0; i < arrMax.length; i++){
+    res.push(a[i])
+    res.push(b[i])
+  }
+  return res.filter(e => e != undefined)
+  // your code here
+}

@@ -1,0 +1,14 @@
+function sumOfABeach(beach1) {
+  let beach = beach1.toLowerCase()
+  let count = 0
+  for(let i = 0; i < beach.length; i++){
+    if(beach[i]+beach[i+1]+beach[i+2]+beach[i+3] === "sand"
+      || beach[i]+beach[i+1]+beach[i+2]+beach[i+3]+beach[i+4] === "water"
+      || beach[i]+beach[i+1]+beach[i+2]+beach[i+3] === "fish"
+      || beach[i]+beach[i+1]+beach[i+2] === "sun"){
+       count += 1
+       }
+  }
+  return count
+  // your code here
+}

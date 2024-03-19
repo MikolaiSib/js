@@ -1,0 +1,8 @@
+function numObj(s){
+  return s.map(n => {
+    let str = n.toString()
+    let obj = {}
+    obj[str] = String.fromCharCode(n)
+    return obj
+  })  
+}

@@ -1,0 +1,14 @@
+function dbSort(a){
+  let arrStr = []
+  let arrNum = []
+  for(let i = 0; i < a.length; i++){
+    if(typeof a[i] === 'string'){
+      arrStr.push(a[i])
+    }
+    if(typeof a[i] === 'number'){
+      arrNum.push(a[i])
+    }
+  }
+  return [...arrNum.sort((a, b) => a - b), ...arrStr.sort()]
+// Code here
+}

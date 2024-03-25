@@ -1,0 +1,27 @@
+function tacofy(word) {
+  let str = word.toLowerCase()
+  let arr = []
+  for(let i = 0; i < str.length; i++){
+    if(str[i] === 'a' || str[i] === 'e' ||  str[i] === 'u'
+      || str[i] === 'i' || str[i] === 'o'){
+      arr.push('beef')
+    }
+    if(str[i] === 't'){
+      arr.push('tomato')
+    }
+    if(str[i] === 'l'){
+      arr.push('lettuce')
+    }
+    if(str[i] === 'c'){
+      arr.push('cheese')
+    }
+    if(str[i] === 'g'){
+      arr.push('guacamole')
+    }
+    if(str[i] === 's'){
+      arr.push('salsa')
+    }
+  }
+  return ['shell', ...arr, 'shell']
+  // Code here
+}

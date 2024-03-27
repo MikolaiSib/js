@@ -1,0 +1,4 @@
+function cupVolume(d1, d2, height){
+ return Math.round(Math.PI*height/12*(d1**2 + d1*d2 + d2**2)*100)/100
+  //Find the volume
+  }

@@ -1,0 +1,33 @@
+function closest(arr){
+  let arrP = []
+  let arrO = []
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] === 0){
+      return 0
+    }
+    if(arr[i] > 0){
+      arrP.push(arr[i])
+    }
+    if(arr[i] < 0){
+      arrO.push(arr[i])
+    }
+  }
+  arrO.sort((a, b) => b - a)
+  arrP.sort((a, b) => a - b)
+  if(arrO.length === 0){
+    return arrP[0]
+  }
+  if(arrP.length === 0){
+    return arrO[0]
+  }
+  if(arrO[0] * -1 === arrP[0]){
+    return null
+  }
+  if(arrO[0] * -1 > arrP[0]){
+    return arrP[0]
+  }
+  if(arrO[0] * -1 <arrP[0]){
+    return arrO[0]
+  }
+  // return null if it is not possible to return 1 unique closest value
+}

@@ -1,0 +1,12 @@
+function arrayChange(arr) {
+  let res = [arr[0]]
+  for(let i = 0; i < arr.length-1; i++){
+    if(res[i] < arr[i+1]){
+      res[i+1] = arr[i+1]
+    } else {
+      res[i+1] = res[i] + 1
+    }
+  }
+  return res.reduce((acc, el) => acc + el) - arr.reduce((acc, el) => acc + el)
+  //coding and coding..  
+}

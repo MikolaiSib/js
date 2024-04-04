@@ -1,0 +1,19 @@
+function nextLetter(str) {
+  let res = ''
+  for(let i = 0; i < str.length; i++){
+    let s = str[i].charCodeAt(0);
+    if(s >= 65 && s <= 122){
+      if(s === 90){
+        res += String.fromCharCode(65)
+      } else if(s === 122){
+        res += String.fromCharCode(97)
+      } else {
+        res += String.fromCharCode(s+1)
+      }
+    } else {
+      res += str[i]
+    }
+  }
+  return res
+  // go for it  
+}

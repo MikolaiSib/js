@@ -1,0 +1,8 @@
+function initials(n){
+  let arr = n.split(' ')
+  let res = []
+  for(let i = 0; i<arr.length-1; i++){
+    res.push(arr[i].slice(0, 1).toUpperCase() +'.')
+  }
+  return res.join('') + arr.at(-1).slice(0, 1).toUpperCase() + arr.at(-1).slice(1)
+}

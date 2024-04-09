@@ -1,0 +1,12 @@
+function makeParts(arr, chunkSize) {
+  let len = arr.length
+  if(len <= chunkSize){
+    return [arr]
+  }
+  let count = Math.ceil(len/chunkSize)
+  let res = []
+  for(let i = 0; i < count*chunkSize; i+=chunkSize){
+    res.push(arr.slice(i, i+chunkSize))
+  }
+  return res;
+}

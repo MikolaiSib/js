@@ -1,0 +1,12 @@
+function splitByValue(k, elements){
+  let res1 = []
+  let res2 = []
+  for(let i = 0; i < elements.length; i++){
+    if(elements[i] < k){
+      res1.push(elements[i])
+    } else {
+      res2.push(elements[i])
+    }
+  }
+   return [...res1, ...res2]   
+}

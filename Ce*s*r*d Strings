@@ -1,0 +1,13 @@
+function uncensor(infected, discovered) {
+  let n = 0
+  let res = ''
+  for(let i = 0; i < infected.length; i++){
+    if(infected[i] === '*'){
+      res += discovered[n]
+      n += 1
+    } else {
+      res += infected[i]
+    }
+  }
+  return res;
+}

@@ -1,0 +1,14 @@
+function missingWord(nums, str) {
+  let s = str.split(' ').join('')
+  nums.sort((a, b) => a-b)
+  let res = ''
+  for(let i = 0; i <nums.length; i++){
+    let temp = s[nums[i]]
+    if(temp === undefined){
+      return "No mission today"
+    }
+    res += temp
+  }
+  return res.toLowerCase()
+  // Jenny needs your help...
+}

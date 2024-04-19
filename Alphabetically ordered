@@ -1,0 +1,5 @@
+function alphabetic(s) {
+  let str = s.split('').sort().join('')
+  // Yor code here
+  return str === s;
+}

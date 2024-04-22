@@ -1,0 +1,12 @@
+function findAB(numbers,c){
+  for(let i = 0; i < numbers.length; i++){
+    let arr = numbers.slice(i+1)
+    for(let j = 0; j < arr.length; j++){
+      if(numbers[i] * arr[j] === c){
+        return [numbers[i], arr[j]]
+      }
+    }
+  }
+  return null
+  //coding and coding...
+}

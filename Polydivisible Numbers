@@ -1,0 +1,11 @@
+function polydivisible(x) {
+  let s = x.toString()
+  for(let i = 1; i <= s.length; i++){
+    let tempNum = Number(s.slice(0, i))
+    let temp = tempNum/i
+    if(temp !== Math.ceil(temp)){
+      return false
+    }
+  }
+  return true;
+}

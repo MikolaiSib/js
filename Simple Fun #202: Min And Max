@@ -1,0 +1,20 @@
+function minAndMax(l, d, x) {
+  let min = l
+  let max = d
+  for(let i = 0; i <= max - min; i++){
+    let tempSum = (l+i).toString().split('').reduce((acc, el) => +acc + +el)
+    if(tempSum === x){
+      min = l+i
+      break
+    }
+  }
+  for(let i = 0; i <= max - min; i++){
+    let tempSum = (d-i).toString().split('').reduce((acc, el) => +acc + +el)
+    if(tempSum === x){
+      max = d-i
+      break
+    }
+  }
+  return [min, max]
+  //coding and coding..
+}

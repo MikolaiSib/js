@@ -1,0 +1,7 @@
+function reverseMiddle(array) {
+  let len = array.length
+  if(len%2 === 0){
+    return array.slice(len/2-1, len/2+1).reverse()
+  }
+  return array.slice(len/2-1, len/2+2).reverse()
+}

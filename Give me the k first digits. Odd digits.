@@ -1,0 +1,20 @@
+function findOddDigits(n, k) {
+  if(k===0){
+    return 0
+  }
+  let res = ''
+  let s = n.toString()
+  for(let i = 0; i < s.length; i++){
+    if(Number(s[i])%2){
+      res += s[i]
+    }
+    if(res.length === k){
+      break
+    }
+  }
+  if(res.length < k){
+      return 0
+    }
+  return Number(res)
+//Write your wonderful code here!
+}

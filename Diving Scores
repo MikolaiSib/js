@@ -1,0 +1,5 @@
+function scoreOfDive(scores, tariff) {
+  scores.sort((a, b) => a-b)
+  return (scores.slice(2, scores.length-2).reduce((acc, el) => acc+el)*tariff).toFixed(2)
+  // your code here
+}

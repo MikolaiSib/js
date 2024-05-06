@@ -1,0 +1,6 @@
+function voltage(arr,total){
+  let resistance = arr.reduce((acc, el) => acc + el)
+  let chunk = total/resistance
+  return arr.map(e => Math.round(chunk*e*100)/100)
+  //coding and coding
+}

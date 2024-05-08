@@ -1,0 +1,5 @@
+function maxedOut(arr) {
+  let sum = arr.reduce((acc, el) => acc+el**3, 0)
+  return sum <= 2**53-1 ? sum : "You've pushed me to the max!"
+  // --> Push it to the limit
+}

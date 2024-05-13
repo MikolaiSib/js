@@ -1,0 +1,17 @@
+function balancedNum(number)
+{
+  let s = number.toString()
+  let len = s.length
+  if(len <= 2){
+    return "Balanced"
+  }
+  if(len%2){
+    let sumStart = s.slice(0, len/2).split('').map(e => Number(e)).reduce((acc, el) => acc + el)
+    let sumEnd = s.slice(len/2+1).split('').map(e => Number(e)).reduce((acc, el) => acc + el)
+    return sumStart === sumEnd ? "Balanced" : "Not Balanced"
+  } else {
+    let sumStart = s.slice(0, len/2-1).split('').map(e => Number(e)).reduce((acc, el) => acc + el)
+    let sumEnd = s.slice(len/2+1).split('').map(e => Number(e)).reduce((acc, el) => acc + el)
+    return sumStart === sumEnd ? "Balanced" : "Not Balanced"
+  }
+}

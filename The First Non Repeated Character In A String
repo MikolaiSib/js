@@ -1,0 +1,15 @@
+function firstNonRepeated(s) {
+   let obj = {}
+  for(let i = 0; i < s.length; i++){
+    if(obj.hasOwnProperty(s[i])){
+      obj[s[i]] += 1
+    }
+    else {
+      obj[s[i]] = 1
+    }
+  }
+  let resArr = Object.entries(obj)
+  const arrFilter = resArr.filter(e => e[1] === 1)
+  return arrFilter.length === 0 ? null : arrFilter[0][0]
+  // your code here
+}

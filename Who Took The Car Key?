@@ -1,0 +1,4 @@
+function whoTookTheCarKey(message) {
+  return message.map(e => String.fromCharCode(parseInt(e, 2))).join('')
+  //Find that Freakin' Key!
+}

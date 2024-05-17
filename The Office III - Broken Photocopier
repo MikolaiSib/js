@@ -1,0 +1,12 @@
+function broken(x){
+  let resStr = ''
+  for(let i = 0; i < x.length; i++){
+    if(x[i] === '0'){
+      resStr += '1'
+    }
+  if(x[i] === '1'){
+      resStr += '0'
+    }
+  }
+  return resStr
+}

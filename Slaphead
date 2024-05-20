@@ -1,0 +1,24 @@
+function bald(x){
+  let count = 0
+  let resStr = ''
+  let res = 'Hobo!'
+  for(let i = 0; i < x.length; i++){
+    if(x[i] === '/'){
+      count += 1
+    }
+    resStr += '-'
+  }
+  if(count === 0){
+    res = "Clean!"
+  }
+  if(count === 1){
+    res = "Unicorn!"
+  }
+  if(count === 2){
+    res = "Homer!"
+  }
+  if(count >= 3 && count <= 5){
+    res = "Careless!"
+  }
+  return [resStr, res]
+}

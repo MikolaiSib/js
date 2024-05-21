@@ -1,0 +1,20 @@
+function gordon(a){
+  let s = a.toLowerCase()
+  let resStr = ''
+  for(let i = 0; i <s.length; i++){
+    if(s[i] === ' '){
+      resStr += '!!!! '
+      continue
+    }
+    let tmpStr = s[i].charCodeAt(0)
+    let tmpUpperStr = String.fromCharCode(tmpStr-32);
+    if(tmpUpperStr === 'A'){
+      resStr += '@'
+    } else if (tmpUpperStr === 'E' || tmpUpperStr === 'U' || tmpUpperStr === 'I' || tmpUpperStr === 'O') {
+      resStr += '*'
+    } else {
+      resStr += tmpUpperStr
+    }
+  }
+  return resStr+ '!!!!'
+}

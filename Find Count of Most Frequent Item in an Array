@@ -1,0 +1,17 @@
+function mostFrequentItemCount(collection) {
+  if(collection.length === 0){
+    return 0 
+  }
+   let obj = {}
+  for(let i = 0; i < collection.length; i++){
+    if(obj.hasOwnProperty(collection[i])){
+      obj[collection[i]] += 1
+    }
+    else {
+      obj[collection[i]] = 1
+    }
+  }
+  let resArr = Object.values(obj)
+  return Math.max(...resArr)
+  // Do your magic. :)
+}

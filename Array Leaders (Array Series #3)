@@ -1,0 +1,12 @@
+function arrayLeaders(numbers){
+  let resArr = []
+  for(let i = 0; i<numbers.length-1; i++){
+    if(numbers[i] > numbers.slice(i+1).reduce((acc, el) => acc+el)){
+      resArr.push(numbers[i])
+    }
+  }
+  if(numbers[numbers.length-1]>0){
+    resArr.push(numbers[numbers.length-1])
+  }
+  return resArr;
+}

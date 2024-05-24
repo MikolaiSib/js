@@ -1,0 +1,24 @@
+function tiyFizzBuzz(sentence){
+  let resStr = ''
+  for(let i = 0; i < sentence.length; i++){
+    let tmpStr = sentence[i].charCodeAt(0) 
+    if(tmpStr >= 65 && tmpStr <= 90){
+      if(tmpStr === 65 || tmpStr === 69 || tmpStr === 73 || tmpStr === 79 || tmpStr === 81 || tmpStr === 85 || tmpStr === 89){
+        resStr += "Iron Yard"
+      } else {
+        resStr += "Iron"
+      }
+    } else if(tmpStr >= 97 && tmpStr <= 122){
+      if(tmpStr === 97 || tmpStr === 101 || tmpStr === 105 || tmpStr === 111 || tmpStr === 113 || tmpStr === 117 || tmpStr === 121){
+        resStr += "Yard"
+      } 
+      else {
+        resStr += sentence[i]
+    }
+    } 
+    else {
+        resStr += sentence[i]
+    }
+  }
+  return resStr
+}

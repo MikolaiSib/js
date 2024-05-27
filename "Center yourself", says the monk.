@@ -1,0 +1,10 @@
+function center (strng, width, fill = ' ') {
+  let lenStr = strng.length
+  if(lenStr >= width){
+    return strng
+  }
+  let lenDiff = width - lenStr
+  let startNum = Math.round(lenDiff/2)
+  let endNum = lenDiff - startNum 
+  return fill.repeat(startNum) + strng + fill.repeat(endNum)
+}

@@ -1,0 +1,9 @@
+function time(distance,boatSpeed,stream){
+  let arr = stream.split(' ')
+  let streamSpeed = Number(arr[1])
+  if(arr[0] === 'Upstream'){
+    streamSpeed *= -1
+  }
+  return Math.round(distance*100/(boatSpeed + streamSpeed))/100
+//Write your own Code!
+}

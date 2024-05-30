@@ -1,0 +1,10 @@
+function position(x, y, n) {
+  let range = Array(x).fill(1).map((a, b) => a + b)
+  for(let i = -999; i < 9999; i++){
+    let arr = range.map(e => e+i)
+    if(arr.reduce((acc, el) => acc+el) === y){
+      return arr[n]
+    }
+  }
+  // TODO: return consecutive integer at requested position
+}

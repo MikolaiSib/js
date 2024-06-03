@@ -1,0 +1,10 @@
+Array.prototype.sortReloaded = function(dir='asc'){
+  if(dir !== 'asc' && dir !== 'desc'){
+    return false
+  }
+  let arr = [...this]
+  if(dir === 'desc'){
+    return arr.sort((a,b) => b - a )
+  }
+  return arr.sort((a,b) => a - b )
+}

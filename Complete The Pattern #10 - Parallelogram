@@ -1,0 +1,14 @@
+function pattern(n){
+  if(n <= 0){
+    return ''
+  }
+ let range = Array(9).fill(1).map((a, b) => a + b).join('') + '0'
+ let numStr = range.repeat(n).slice(0, n)
+ let len = n*2-1
+ let res = ''
+ for(let i = 0; i < n; i++){
+   res += ' '.repeat(n-1-i) + numStr + ' '.repeat(i) + '\n'
+ }
+   // Happy Coding ^_^
+ return res.slice(0, res.length-1);
+}

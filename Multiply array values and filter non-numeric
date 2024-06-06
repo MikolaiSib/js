@@ -1,0 +1,6 @@
+function multiplyAndFilter(array, multiplier){
+  let arr = array.filter(n => typeof n === 'number')
+  let a = arr.map(n => n*multiplier)
+  return a
+  // your code
+}

@@ -1,0 +1,23 @@
+function solve(s){
+  let uppercase = 0
+  let lowercase = 0
+  let numbers = 0
+  let special = 0
+  for(let  i = 0; i < s.length; i++){
+    let temp = s[i].charCodeAt(0) 
+    if(temp >= 48 && temp <= 57){
+      numbers += 1
+    }
+    else if(temp >= 97 && temp <= 122){
+      lowercase += 1
+    }
+    else if(temp >= 65 && temp <= 90){
+      uppercase += 1
+    }
+    else{
+      special += 1
+    }
+  }
+  return [uppercase, lowercase, numbers, special]
+ //..
+}

@@ -1,0 +1,15 @@
+function countingTriangles(V) {
+  let count = 0
+  for(let i = 0; i < V.length-2; i++){
+    for(let j = i+1; j < V.length-1; j++){
+      for(let k = j+1; k < V.length; k++){
+        let arrSort = [V[i], V[j], V[k]].sort((a, b) => a -b)
+        if(arrSort[0] + arrSort[1] > arrSort[2]){
+          count += 1  
+        }
+      }
+    }
+  }
+  return count
+ //coding and coding.. 
+}

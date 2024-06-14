@@ -1,0 +1,17 @@
+function strong(n) {
+  let arr = n.toString().split('').map(e => Number(e))
+  let sum = 0
+  
+  const fib = num => {
+    let prod = 1
+    for(let i = 1; i <= num; i++){
+      prod *= i
+    }
+    return prod
+  }
+  
+  for(let i = 0; i < arr.length; i++){
+    sum += fib(arr[i])
+  }
+  return sum === n ? "STRONG!!!!" : "Not Strong !!" ;
+}

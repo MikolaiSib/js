@@ -1,0 +1,16 @@
+function reverseInvert(array){
+  let res = []
+  for(let i = 0; i < array.length; i++){
+    if(Number.isInteger(array[i]) && array[i] >= 0){
+      let temp = Number(array[i].toString().split('').reverse().join(''))
+      res.push(temp*-1)
+    }
+    if(Number.isInteger(array[i]) && array[i] < 0){
+      let tmp = -1*array[i]
+      let temp = Number(tmp.toString().split('').reverse().join(''))
+      res.push(temp)
+    }
+  }
+  return res
+  //your code here
+}

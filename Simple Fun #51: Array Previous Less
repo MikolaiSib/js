@@ -1,0 +1,13 @@
+function arrayPreviousLess(arr) {
+  let resArr = []
+  for(let i = 0; i < arr.length; i++){
+    let temp = arr.slice(0, i).reverse().filter(e => e < arr[i])
+    if(temp.length > 0){
+      resArr.push(temp[0])
+    } else{
+      resArr.push(-1)
+    }
+  }
+  return resArr
+  //coding and coding...
+}

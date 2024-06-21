@@ -1,0 +1,6 @@
+function toTime(seconds) {
+  let hour = Math.floor(seconds / 3600)
+  let minute = Math.floor(seconds / 60) - hour * 60
+  return hour + ' hour(s) and ' + minute + ' minute(s)'
+  //code here
+}

@@ -1,0 +1,16 @@
+function sortByHeight(a) {
+  const resArr = []
+  const sortArr = [...a].sort((a, b) => a - b)
+  const sortArrFilter = sortArr.filter(e => e !== -1)
+  let index = 0
+  for(let i = 0; i < a.length; i++){
+    if(a[i] === -1){
+      resArr.push(-1)
+    } else {
+      resArr.push(sortArrFilter[index])
+      index += 1
+    }
+  }
+  return resArr
+  //coding and coding..
+}

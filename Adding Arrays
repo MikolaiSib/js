@@ -1,0 +1,12 @@
+function arrAdder(arr) {
+  const len = arr[0].length
+  let res = ''
+  for(let i = 0; i < len; i++){
+    let temp = ''
+    for(let j = 0; j < arr.length; j++){
+      temp += arr[j][i]
+    }
+    res += temp + ' '
+  }
+  return res.trim()
+}

@@ -1,0 +1,13 @@
+function remove (string) {
+  let startStr = ''
+  let endStr = ''
+  for(let i = 0; i < string.length; i++){
+    if(string[i] === '!'){
+      endStr += string[i]
+    } else {
+      startStr += string[i]
+    }
+  }
+  return startStr + endStr
+  //coding and coding....
+}

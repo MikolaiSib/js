@@ -1,0 +1,7 @@
+function distanceBetweenCircles(a, b){
+  let res = Math.sqrt((a.center.x-b.center.x)**2+(a.center.y-b.center.y)**2) - a.radius - b.radius
+  if(res<0){
+    res = 0
+  }
+  return res
+}

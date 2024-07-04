@@ -1,0 +1,12 @@
+function gHappy(str) {
+  for(let i = 0; i < str.length-1; i++){
+    if(str[i] === 'g'){
+      if((str[i] === 'g' && str[i+1] === 'g')||(str[i] === 'g' && str[i-1] === 'g')){
+      } else {
+        return false
+      }
+    }
+  }
+  return true
+  //coding and coding..
+}

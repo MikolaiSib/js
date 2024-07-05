@@ -1,0 +1,8 @@
+function loopArr(arr, direction, steps) {
+  if(direction === 'right'){
+    return [...arr.slice(arr.length - steps), ...arr.slice(0, arr.length - steps)]
+  }
+  if(direction === 'left'){
+    return [...arr.slice(steps), ...arr.slice(0, steps)]
+  }
+}

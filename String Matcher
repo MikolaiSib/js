@@ -1,0 +1,5 @@
+function isMatching(string, str1, str2) {
+  let s1 = string.toLowerCase().trim().split('').sort().join('').trim()
+  let s2 = (str1+str2).toLowerCase().trim().split('').sort().join('').trim()
+  return s1 === s2
+}

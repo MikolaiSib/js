@@ -1,0 +1,11 @@
+var palindromeChainLength = function(n) {
+  
+  for(let i = 0; i < 99999; i++){
+    if(n.toString() === n.toString().split('').reverse().join('')){
+      return i
+    } else {
+      let temp = Number(n.toString().split('').reverse().join(''))
+      n += temp
+    }
+  }
+};

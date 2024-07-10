@@ -1,0 +1,15 @@
+function solve(arr){  
+  let arrLower = arr.map(e => e.toLowerCase())
+  let res = []
+  for(let i = 0; i < arrLower.length; i++){
+    let tempCount = 0
+    for(let j = 0; j < arrLower[i].length; j++){
+      if(arrLower[i][j].charCodeAt(0) - 97 === j){
+        tempCount += 1
+      }
+    }
+    res.push(tempCount)
+  }
+  return res
+//code
+};

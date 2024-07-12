@@ -1,0 +1,26 @@
+function to24hourtime(hour, minute, period) {
+  let min = minute.toString()
+  if(minute < 10){
+    min = '0' + minute
+  }
+  if(period === 'am'){
+    if(hour === 12){
+      return '00' + min
+    } else if(hour < 10){
+      return '0' + hour + min
+    } else {
+      return hour + min
+    }
+  }
+  if(period === 'pm'){
+    if(hour === 12){
+      return '12' + min
+    } else {
+      let h = hour +12
+      return h + min
+    } 
+  }
+  // hour will always range from 1 to 12 (inclusive)
+  // minute will always range from 0 to 59 (inclusive)
+  // period will always be either "am" or "pm"
+}

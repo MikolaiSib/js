@@ -1,0 +1,19 @@
+function majority(arr) {
+  if(arr.length === 0){
+    return null
+  }
+  const obj = {}
+  for(let i = 0; i < arr.length; i++){
+    if(obj.hasOwnProperty(arr[i])){
+      obj[arr[i]] += 1
+    } else {
+      obj[arr[i]] = 1
+    }
+  }
+  const arrRes = Object.entries(obj)
+  if(arrRes.length === 1){
+    return arrRes[0][0]
+  }
+  const sortArr = arrRes.sort((a, b) => b[1] - a[1])
+  return sortArr[0][1] !== sortArr[1][1] ? sortArr[0][0] : null
+}

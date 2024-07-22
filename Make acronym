@@ -1,0 +1,9 @@
+function toAcronym(inp){
+  const arr = inp.split(' ')
+  let resStr = ''
+  for(let i = 0; i < arr.length; i++){
+    resStr += arr[i][0]
+  }
+  return resStr.toUpperCase()
+  // ...
+}

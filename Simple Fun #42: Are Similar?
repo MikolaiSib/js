@@ -1,0 +1,15 @@
+function areSimilar(A, B) {
+  const aSort = [...A].sort((a, b) => a -b)
+  const bSort = [...B].sort((a, b) => a -b)
+  let count = 0
+  for(let i = 0; i < A.length; i++){
+    if(aSort[i] !== bSort[i]){
+      return false
+    }
+    if(A[i] !== B[i]){
+      count += 1
+    }
+  }
+  return count > 2 ? false : true
+  //coding and coding..
+}

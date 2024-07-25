@@ -1,0 +1,10 @@
+function passTheDoorMan (word){
+  let s = ''
+  for(let i = 0; i < word.length -1; i++){
+    if(word[i] === word[i+1]){
+      s = word[i]
+      break
+    }
+  }  
+  return (s.charCodeAt(0)-96)*3
+}

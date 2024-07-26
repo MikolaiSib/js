@@ -1,0 +1,7 @@
+function incrementer(nums) { 
+  const getRemainder = (num) => {
+    return num%10
+  }
+  return nums.map((e, i) => getRemainder(e+i+1))
+  // code goes here
+}

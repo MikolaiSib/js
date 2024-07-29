@@ -1,0 +1,10 @@
+function averageLength(arr) { 
+  const sumLength =  arr.reduce((acc, el) => acc + el.length, 0)
+  const averageLength  =  Math.round(sumLength/arr.length)
+  let resArr = []
+  for(let i = 0; i < arr.length; i++){
+    resArr.push(arr[i][0].repeat(averageLength))
+  }
+  return resArr
+  // good luck
+}

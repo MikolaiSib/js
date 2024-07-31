@@ -1,0 +1,5 @@
+function mirror(data) {
+  const arrSort = [...data].sort((a, b) => a -b)
+  return [...arrSort.slice(0, arrSort.length-1), ...arrSort.reverse()]
+  /* go ahead */
+}

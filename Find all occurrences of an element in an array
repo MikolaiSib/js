@@ -1,0 +1,10 @@
+const findAll = (array, n) => {
+  const resArr = []
+  for(let i = 0; i < array.length; i++){
+    if(array[i] === n){
+      resArr.push(i)
+    }
+  }
+  return resArr
+  // your code here
+}

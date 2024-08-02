@@ -1,0 +1,11 @@
+function binaryCleaner(arr) {
+  const arrLessTwo = arr.filter(e => e < 2)
+  const arrIndexGreaterOne = []
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] > 1){
+      arrIndexGreaterOne.push(i)
+    }
+  }
+  return [arrLessTwo, arrIndexGreaterOne]
+  // 
+}

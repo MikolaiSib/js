@@ -1,0 +1,9 @@
+function battle(x, y) {
+  const sumX = x.split('').reduce((acc, el) => el.charCodeAt(0) - 64 + acc, 0) 
+  const sumY = y.split('').reduce((acc, el) => el.charCodeAt(0) - 64 + acc, 0) 
+  if(sumX === sumY){
+    return "Tie!"
+  }
+  return sumX > sumY ? x : y
+  // Lets the battle begin!
+}

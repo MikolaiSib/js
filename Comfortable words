@@ -1,0 +1,22 @@
+const comfortableWord = word => {
+  const resArr = []
+  const leftArr = ['q', 'w', 'e', 'r', 't', 'a', 's', 'd', 'f', 'g', 'z', 'x', 'c', 'v', 'b']
+  const rightArr = ['y', 'u', 'i', 'o', 'p', 'h', 'j', 'k', 'l', 'n', 'm']
+  for(let i = 0; i < word.length; i++){
+    if(leftArr.includes(word[i])){
+      if(i%2){
+        resArr.push('R')
+      } else {
+        resArr.push('L')
+      }
+    }  else if(rightArr.includes(word[i])){
+      if(i%2){
+        resArr.push('L')
+      } else {
+        resArr.push('R')
+      }
+    }
+  }
+  return [...new Set(resArr)].length === 1
+  // TODO: complete
+};

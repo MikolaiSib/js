@@ -1,0 +1,6 @@
+function arrayCenter(a) {
+  const center = Math.abs(a.reduce((acc, el) => acc+el)/a.length)
+  const min = Math.min(...a)
+  return a.filter(e => Math.abs(e - center) < min)//center
+  //coding and coding..
+}

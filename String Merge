@@ -1,0 +1,21 @@
+function stringMerge(string1, string2, letter){
+  let resStr1 = ''
+  for(let i = 0; i < string1.length; i++){
+    if(string1[i] === letter){
+      break
+    } else {
+      resStr1 += string1[i]
+    }
+  }
+  let resStr2 = ''
+  let flag = false
+  for(let i = 0; i < string2.length; i++){
+    if(flag){
+      resStr2 += string2[i]
+    } else if (string2[i] === letter){
+      flag = true
+    } 
+  }
+  return resStr1 + letter + resStr2
+  // Add code here :)
+}

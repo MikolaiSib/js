@@ -1,0 +1,21 @@
+function nameScore(name){
+  const nameLower = name.toLowerCase()
+  let sum = 0
+  for(let i = 0; i < nameLower.length; i++){
+    if(nameLower[i] === 'a' || nameLower[i] === 'b' || nameLower[i] === 'c' || nameLower[i] === 'd' || nameLower[i] === 'e' ){
+      sum += 1
+    } else if(nameLower[i] === 'f' || nameLower[i] === 'g' || nameLower[i] === 'h' || nameLower[i] === 'i' || nameLower[i] === 'j' ){
+      sum += 2
+    } else if(nameLower[i] === 'k' || nameLower[i] === 'l' || nameLower[i] === 'm' || nameLower[i] === 'n' || nameLower[i] === 'o' ){
+      sum += 3
+    } else if(nameLower[i] === 'p' || nameLower[i] === 'q' || nameLower[i] === 'r' || nameLower[i] === 's' || nameLower[i] === 't' ){
+      sum += 4
+    } else if(nameLower[i] === 'u' || nameLower[i] === 'v' || nameLower[i] === 'w' || nameLower[i] === 'x' || nameLower[i] === 'y' ){
+      sum += 5
+    }
+  }
+  const obj = {}
+  obj[name] = sum
+  return obj
+  // Insert your brilliant code here
+}

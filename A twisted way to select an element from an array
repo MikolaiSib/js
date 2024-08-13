@@ -1,0 +1,9 @@
+function select (arrSearch, arrTake){
+  const s = arrSearch.sort().reverse()[2][2]
+  for(let i = 0; i < arrTake.length; i++){
+    if(s === arrTake[i][0]){
+      return arrTake[i]
+    }
+  }
+  return 'Nothing here'
+}

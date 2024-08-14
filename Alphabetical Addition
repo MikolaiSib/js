@@ -1,0 +1,17 @@
+function addLetters(...letters) {
+  if(letters.length === 0){
+    return 'z'
+  }
+  let sum = 0
+  for(let i = 0; i < letters.length; i++ ){
+    sum += letters[i].charCodeAt(0) - 96
+  }
+  if(sum > 26){
+    sum = sum%26
+   } 
+  if(sum === 0){
+    return 'z'
+  }
+  return String.fromCharCode(sum+96)
+  // your code here
+}

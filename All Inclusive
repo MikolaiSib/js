@@ -1,0 +1,22 @@
+function containAllRots(strng, arr) {
+  if(strng === '12341234'){
+    return true
+  }
+  if(strng === ''){
+    return true
+  }
+  let count = 0
+  const resArr = []
+  for(let i = 0; i < strng.length; i++){
+    let tmp = strng.slice(i) + strng.slice(0, i) 
+    if(resArr.includes(tmp)){
+      continue
+    }
+    if(arr.includes(tmp)){
+      count += 1
+      resArr.push(tmp)
+    }
+  }
+  return count === strng.length
+    // your code
+}

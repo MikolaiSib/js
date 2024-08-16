@@ -1,0 +1,13 @@
+function rankOfElement(arr, i) {
+  let count = 0
+  for(let j = 0; j < arr.length; j++){
+    if(arr[j] <= arr[i] && j < i){
+      count += 1
+    } 
+    if(arr[j] < arr[i] && j > i){
+      count += 1
+    }
+  }
+  return count
+  //coding and coding..
+}

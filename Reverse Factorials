@@ -1,0 +1,11 @@
+function reverseFactorial(num) {
+  for(let i = 2; i < 999; i++){
+    if(num === 1){
+      return i-1+'!'
+    } else if( num < 1){
+      return 'None'
+    }
+    num = num/i
+  }
+  // happy coding!
+}

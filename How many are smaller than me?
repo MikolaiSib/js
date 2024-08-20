@@ -1,0 +1,9 @@
+function smaller(nums) {
+  const resArr = []
+  for(let i = 0; i < nums.length; i++){
+    let tmp = nums.slice(i+1).filter(e => e < nums[i]).length
+    resArr.push(tmp)
+  }
+  return resArr
+//code me
+}

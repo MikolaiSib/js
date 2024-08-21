@@ -1,0 +1,16 @@
+function duplicateSandwich(a) {
+  let tmpArr
+  for(let i = 0; i < a.length; i++){
+    tmpArr = []
+    let tmpStr = a[i]
+    for(let j = i+1; j < a.length; j++){
+      if(tmpStr === a[j]){
+        if(typeof a === 'string'){
+          return tmpArr.join('')
+        }
+        return tmpArr
+      }
+      tmpArr.push(a[j])
+    }
+  }
+}

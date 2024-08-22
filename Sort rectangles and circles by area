@@ -1,0 +1,13 @@
+function sortByArea(array){
+  const resArr = []
+  for(let i = 0; i < array.length; i++){
+    if(typeof array[i] === 'number'){
+      let tmp = Math.round(array[i]**2*Math.PI*100)/100
+      resArr.push(tmp)
+    } else {
+      resArr.push(Math.round(array[i][0] * array[i][1]*100)/100)
+    }
+  }
+  return resArr.sort((a, b) => a -b)
+  // your code here
+}

@@ -1,0 +1,15 @@
+function filterHomogenous(arrays) {
+  const resArr = []
+  for(let i = 0; i < arrays.length; i++){
+    if(arrays[i].length === 0){
+      continue
+    }
+    let tmpArr = arrays[i].map(el => typeof el)
+    if([...new Set(tmpArr)].length >= 2){
+      continue
+    }
+    resArr.push(arrays[i])
+  }
+  return resArr
+  // Alea iacta est, code legionary!
+}

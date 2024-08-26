@@ -1,0 +1,17 @@
+function dotCalculator (equation) {
+  const arrDot = equation.split(' ')
+  let countDot = 0
+  if(arrDot[1] === '+'){
+    countDot = arrDot[0].length + arrDot[2].length
+  }
+  if(arrDot[1] === '-'){
+    countDot = arrDot[0].length - arrDot[2].length
+  }
+  if(arrDot[1] === '*'){
+    countDot = arrDot[0].length * arrDot[2].length
+  }
+  if(arrDot[1] === '//'){
+    countDot = arrDot[0].length / arrDot[2].length
+  }
+	return '.'.repeat(countDot);
+}

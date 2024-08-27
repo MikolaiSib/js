@@ -1,0 +1,10 @@
+function interest(P,r,n) {
+  let simple = P
+  let compound = P
+  for(let i = 0; i < n; i++){
+    simple += P * r
+    compound += compound * r
+  }
+  return [Math.round(simple), Math.round(compound)]
+  // your code here
+}

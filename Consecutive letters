@@ -1,0 +1,11 @@
+function solve(s){
+  const str = s.split('').sort().join('')
+  let tmpCharCode = str[0].charCodeAt(0)
+  for(let i = 1; i < str.length; i++){
+    if(str[i].charCodeAt(0) !== tmpCharCode+i){
+      return false
+    }
+  }
+  return true 
+    //.. 
+}

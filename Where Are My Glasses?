@@ -1,0 +1,23 @@
+function findGlasses(arr){
+  let flag = false
+  let count = 0
+  for(let i = 0; i < arr.length; i++){
+    let str = arr[i]
+    for(let j = 0; j < str.length; j++){
+      if(flag && str[j]  === '-'){
+        continue
+      } else if(flag && str[j]  === 'O'){
+        count += 1
+        return i
+      } else if(flag && str[j]  !== 'O' && str[j]  !== '-'){
+        flag = false
+        count = 0
+        continue
+      }
+      if(str[j] === 'O' && str[j+1]  === '-'){
+        flag = true
+      }
+    }
+  }
+  // Good luck!
+}

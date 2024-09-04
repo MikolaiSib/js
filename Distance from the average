@@ -1,0 +1,6 @@
+function distancesFromAverage(arr){
+  const sum = arr.reduce((acc, el) => acc+el)
+  const average = sum/arr.length
+  return arr.map(e => Math.round((average - e)*100)/100)
+  //your code here
+}

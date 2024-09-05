@@ -1,0 +1,9 @@
+function trigrams( phrase ) {
+  const str = phrase.replaceAll(' ', "_");
+  const arrRes = []
+  for(let i = 0; i < str.length-2; i++){
+    arrRes.push(str[i] + str[i+1] + str[i+2])
+  }
+  return arrRes.join(' ')
+  // your code here
+}

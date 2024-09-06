@@ -1,0 +1,7 @@
+function equableTriangle(a,b,c) {
+  const per = a+b+c
+  const p = per/2
+  const area = (p*(p-a)*(p-b)*(p-c))**0.5
+  return per === area
+//Your code here!
+}

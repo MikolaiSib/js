@@ -1,0 +1,12 @@
+function decode(message){
+  let resStr = ''
+  for(let i = 0; i < message.length; i++){
+    if(message[i] === ' '){
+      resStr += ' '
+      continue
+    }
+    let tmp = message[i].charCodeAt(0)
+    resStr += String.fromCharCode(122 - tmp + 97)
+  }
+  return resStr 
+}

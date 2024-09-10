@@ -1,0 +1,20 @@
+function oddOnesOut(nums) {
+  const obj ={}
+   for(let j = 0; j < nums.length; j++){
+      if(obj.hasOwnProperty(nums[j])){
+        obj[nums[j]] += 1
+      }
+      else {
+        obj[nums[j]] = 1
+      }
+    }
+    const arr = Object.entries(obj).filter(e => e[1]%2 === 0).map(e => Number(e[0]))
+    const resArr = []
+    for(let i = 0; i < nums.length; i++){
+      if(arr.includes(nums[i])){
+        resArr.push(nums[i])
+      }
+    }
+    return resArr      
+  // your code here
+}

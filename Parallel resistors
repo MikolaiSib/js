@@ -1,0 +1,9 @@
+function resistor_parallel(){
+  const arr = [...arguments]
+  let res = 0
+  for(let i = 0; i < arr.length; i++){
+    res += 1/arr[i]
+  }
+  return 1/res
+  // it take an unlimited number of arguments 
+}

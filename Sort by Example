@@ -1,0 +1,11 @@
+function exampleSort(arr,exampleArr){
+  const resArr = []
+  for(let i = 0; i < exampleArr.length; i++){
+    for(let j = 0; j < arr.length; j++){
+      if(arr[j] === exampleArr[i]){
+        resArr.push(arr[j])
+      }
+    }    
+  }
+  return resArr
+}

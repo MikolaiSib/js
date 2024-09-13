@@ -1,0 +1,5 @@
+function tArea(tStr) {
+  const arr = tStr.split('\n')
+  const x = arr[arr.length-2].split('.')
+  return (x.length-2)**2/2
+}

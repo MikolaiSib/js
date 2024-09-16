@@ -1,0 +1,38 @@
+function battle(x, y) {
+  let sumX = 0
+  let sumY = 0
+  const len = x.length > y.length ? x.length : y.length
+  for(let i = 0; i < len; i++){
+    if(x[i] === undefined){
+      
+    } else {
+      let tmpX = x[i].charCodeAt(0)
+      if(tmpX >= 97 && tmpX <= 122){
+        tmpX -= 96
+        tmpX /= 2
+      }
+      if(tmpX >= 65 && tmpX <= 90){
+        tmpX -= 64
+      }
+      sumX += tmpX
+    }
+    if(y[i] === undefined){
+      
+    } else {
+      let tmpY = y[i].charCodeAt(0)
+      if(tmpY >= 97 && tmpY <= 122){
+        tmpY -= 96
+        tmpY /= 2
+      }
+      if(tmpY >= 65 && tmpY <= 90){
+        tmpY -= 64
+      }
+      sumY += tmpY
+    }
+  }
+  if(sumX === sumY){
+      return "Tie!"
+    }
+  return sumX > sumY ? x : y
+  // Lets the battle begin!
+}

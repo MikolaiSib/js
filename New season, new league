@@ -1,0 +1,12 @@
+function premierLeagueStandings(teamStandings) {
+  const arr = Object.values(teamStandings)
+  const first = arr[0]
+  const others = arr.slice(1).sort()
+  const resObj = {}
+  resObj[1]= first
+  for(let i = 0; i < others.length; i++){
+    resObj[i+2]= others[i]
+  }
+  return resObj
+  // Insert Code here
+}

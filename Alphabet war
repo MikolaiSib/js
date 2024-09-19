@@ -1,0 +1,28 @@
+function alphabetWar(fight)
+{
+  let leftSum = 0
+  let rightSum = 0
+  for(let i = 0; i < fight.length; i++){
+    if(fight[i] === 'w'){
+      leftSum += 4
+    } else if(fight[i] === 'p'){
+      leftSum += 3
+    } else if(fight[i] === 'b'){
+      leftSum += 2
+    } else if(fight[i] === 's'){
+      leftSum += 1
+    } else if(fight[i] === 'm'){
+      rightSum += 4
+    } else if(fight[i] === 'q'){
+      rightSum += 3
+    } else if(fight[i] === 'd'){
+      rightSum += 2
+    } else if(fight[i] === 'z'){
+      rightSum += 1
+    }
+  }
+  if(leftSum === rightSum){
+    return "Let's fight again!"
+  }
+  return leftSum > rightSum ? "Left side wins!" : "Right side wins!"
+}

@@ -1,0 +1,3 @@
+function SumSquares(l){
+    return l.flat(Infinity).reduce((acc, el) => acc + el**2, 0)
+}

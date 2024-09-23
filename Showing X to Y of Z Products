@@ -1,0 +1,8 @@
+var paginationText = function(pageNumber, pageSize, totalProducts){
+  let startPage = pageSize * (pageNumber-1) +1
+  let endPage = pageSize * pageNumber
+  if(endPage > totalProducts){
+    endPage = totalProducts
+  }
+  return "Showing " + startPage + " to " + endPage + " of " + totalProducts + " Products."
+}

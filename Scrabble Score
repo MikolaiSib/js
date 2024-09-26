@@ -1,0 +1,12 @@
+function scrabbleScore(str){
+  const strUpper = str.toUpperCase()
+  let sum = 0
+  for(let i = 0; i < strUpper.length; i++){
+    if(strUpper[i] === ' '){
+      continue
+    }
+    sum += $dict[strUpper[i]]
+  }
+  return sum
+  // ...
+}

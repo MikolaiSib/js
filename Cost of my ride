@@ -1,0 +1,25 @@
+function insurance(age, size, numofdays){
+  if(numofdays <= 0){
+    return 0
+  }
+  
+  let ageTerm = 0
+  if(age < 25){
+    ageTerm = 10
+  }
+  
+  let carTerm = 15
+  
+  if(size === "economy"){
+    carTerm = 0
+  } else if(size === "medium"){
+    carTerm = 10
+  } else if(size === "full-size"){
+    carTerm = 15
+  } else {
+    carTerm = 15
+  }
+  
+  return (ageTerm + 50 + carTerm) * numofdays
+//code here
+}

@@ -1,0 +1,27 @@
+const whosOnline = (friends) => {
+  const resObj = {
+    online: [],
+    offline: [],
+    away: []
+  }
+  for(let i = 0; i < friends.length; i++){
+    if(friends[i].status === 'online' && friends[i].lastActivity <= 10){
+      resObj.online.push(friends[i].username)
+    } else if(friends[i].status === 'online' && friends[i].lastActivity > 10){
+      resObj.away.push(friends[i].username)
+    } else if(friends[i].status === 'offline'){
+      resObj.offline.push(friends[i].username)
+    }
+  }
+  if(resObj.online.length === 0){
+    delete resObj.online
+  }
+  if(resObj.offline.length === 0){
+    delete resObj.offline
+  }
+  if(resObj.away.length === 0){
+    delete resObj.away
+  }
+  return resObj
+// Your code here...
+}

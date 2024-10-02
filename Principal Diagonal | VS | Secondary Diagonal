@@ -1,0 +1,14 @@
+function diagonal(matrix){
+  let sumPrincipalDiagonal = 0
+  let sumSecondaryDiagonal = 0
+  let len = matrix.length
+  for(let i = 0; i < len; i++){
+    sumPrincipalDiagonal += matrix[i][i]
+    sumSecondaryDiagonal += matrix[i][len - i - 1]
+  }
+  if(sumPrincipalDiagonal === sumSecondaryDiagonal){
+    return "Draw!"
+  }
+  return sumPrincipalDiagonal > sumSecondaryDiagonal ? "Principal Diagonal win!" : "Secondary Diagonal win!"
+// write your code ....
+}

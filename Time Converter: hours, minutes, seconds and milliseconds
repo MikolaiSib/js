@@ -1,0 +1,22 @@
+function convert(time){
+  let hours = time.getHours()
+  if(hours < 10){
+    hours = '0' + hours
+  }
+  let min = time.getMinutes()
+  if(min < 10){
+    min = '0' + min
+  }
+  let sec = time.getSeconds()
+  if(sec < 10){
+    sec = '0' + sec
+  }
+  let mSec = time.getMilliseconds()
+  if(mSec < 10){
+    mSec = '00' + mSec
+  } else if(mSec < 100){
+    mSec = '0' + mSec
+  }
+  return hours +':'+ min +':'+  sec +','+ mSec
+  //Your code here!
+}

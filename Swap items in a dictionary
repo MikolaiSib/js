@@ -1,0 +1,14 @@
+function switchDict(dic) {
+  const resObj = {}
+  const arr = Object.entries(dic)
+  for(let i = 0; i < arr.length; i++){
+    if(resObj.hasOwnProperty(arr[i][1])){
+        resObj[arr[i][1]].push(arr[i][0])
+    }
+    else {
+      resObj[arr[i][1]] = []
+      resObj[arr[i][1]].push(arr[i][0])
+    } 
+  }
+  return resObj
+}

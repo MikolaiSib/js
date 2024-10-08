@@ -1,0 +1,8 @@
+function negationValue(string, value) {
+  const len = string.length % 2
+  if(len){
+    return !value
+  }
+  return !!value
+  // your code here
+}

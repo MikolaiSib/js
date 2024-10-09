@@ -1,0 +1,8 @@
+const numbers = (...nums) => {
+  for(let i = 0; i < nums.length; i++){
+    if(typeof nums[i] !== 'number'){
+      return false
+    }
+  }
+  return true  
+} 

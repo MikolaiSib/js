@@ -1,0 +1,13 @@
+function itinerary(travel) {
+  let resStr = ''
+  for(let i = 0; i < travel.length - 1; i++){
+    if(travel[i]['out'] === travel[i+1]['in']){
+      resStr += travel[i]['in'] + '-'
+    } else {
+      resStr += travel[i]['in'] + '-' + travel[i]['out'] + '-'
+    }
+    
+  }
+  return resStr + travel[travel.length - 1]['in'] + '-' + travel[travel.length - 1]['out']
+  // here your code
+}

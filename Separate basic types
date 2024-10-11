@@ -1,0 +1,26 @@
+function separateTypes(input) {
+  const objType = {
+    number: [],  
+    string: [],
+    boolean: []
+  }
+  for(let i = 0; i < input.length; i++){
+    if(typeof input[i] === 'number'){
+      objType.number.push(input[i])
+    } else if(typeof input[i] === 'string'){
+      objType.string.push(input[i])
+    } else if(typeof input[i] === 'boolean'){
+      objType.boolean.push(input[i])
+    }
+  }
+  if(objType.number.length === 0){
+    delete objType.number
+  }
+  if(objType.string.length === 0){
+    delete objType.string
+  }
+  if(objType.boolean.length === 0){
+    delete objType.boolean
+  }
+  return objType
+}

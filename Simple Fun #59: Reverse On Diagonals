@@ -1,0 +1,19 @@
+function reverseOnDiagonals(matrix) {
+  const resMatrix = []
+  const len = matrix.length
+  for(let i = 0; i < len; i++){
+    let arr = []
+    for(let j = 0; j < len; j++){
+      if(i === j){
+        arr.push(matrix[len - i - 1][matrix.length - j - 1])
+      } else if(i === len - j - 1){
+        arr.push(matrix[len - i - 1][len - j - 1])
+      } else {
+        arr.push(matrix[i][j])
+      }
+    }  
+    resMatrix.push(arr)
+  }
+  return resMatrix
+  //coding and coding..
+}

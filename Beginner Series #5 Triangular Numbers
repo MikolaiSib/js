@@ -1,0 +1,6 @@
+function isTriangular(t) {
+  let twoT = t*2
+  let sqrt = Math.floor(twoT**0.5)
+  return sqrt*(sqrt+1)/2 === t
+  // Your code here
+}

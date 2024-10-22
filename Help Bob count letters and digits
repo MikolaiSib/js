@@ -1,0 +1,10 @@
+function countLettersAndDigits(input) {
+  let count = 0
+  for(let i = 0; i < input.length; i++){
+    let tmp = input[i].charCodeAt(0)
+    if((tmp >= 97 && tmp <= 122) || (tmp >= 65 && tmp <= 90) || (tmp >= 48 && tmp <= 57)){
+      count += 1
+    }
+  }
+  return count 
+}

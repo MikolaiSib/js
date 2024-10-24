@@ -1,0 +1,13 @@
+var parseNumbers = function(intStrs) {
+  const resArr = []
+  for(let i = 0; i < intStrs.length; i++){
+    let tmp = +intStrs[i]
+    if(tmp >= 0){
+      resArr.push(Math.floor(intStrs[i]))
+    } else {
+      resArr.push(Math.ceil(intStrs[i]))
+    }
+  }
+  return resArr
+}
+  

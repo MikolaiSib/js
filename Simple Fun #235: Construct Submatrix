@@ -1,0 +1,18 @@
+function constructSubmatrix(matrix, rowsToDelete, columnsToDelete) {
+  const resMatrix = []
+  for(let i = 0; i < matrix.length; i++){
+    let temp = []
+    if(rowsToDelete.includes(i)){
+        continue
+      }
+    for(let j = 0; j < matrix[0].length; j++){
+      if(columnsToDelete.includes(j)){
+        continue
+      }
+      temp.push(matrix[i][j])
+    }
+    resMatrix.push(temp)
+  }
+  return resMatrix 
+  //coding and coding..
+}

@@ -1,0 +1,8 @@
+function flyBy(lamps, drone){
+  let lenDrone = drone.length
+  let lenlamps = lamps.length
+  if(lenDrone > lenlamps){
+    return 'o'.repeat(lenlamps)
+  }
+  return 'o'.repeat(lenDrone) + lamps.slice(lenDrone)
+}

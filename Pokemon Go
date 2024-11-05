@@ -1,0 +1,21 @@
+function pidgeyCalc ( pidgeys, candy ) {
+  if( pidgeys === 0 || candy === 0){
+    return 0
+  }
+  let countXP = 0
+  for(let i = 0 ; i < 99999; i++){
+    if(candy >= 12){
+      pidgeys -= 1
+      countXP += 1
+      candy -= 11
+    } else {
+      pidgeys -= 1
+      candy += 1
+    }
+    if(pidgeys === 0){
+      break
+    } 
+  }
+  return countXP * 500
+  // catch 'em all
+}

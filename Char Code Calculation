@@ -1,0 +1,13 @@
+function calc(x){
+  let total = ''
+  for(let i = 0; i < x.length; i++){
+    total += x[i].charCodeAt(0).toString();
+  }
+  let sum = 0
+  for(let i = 0; i < total.length; i++){
+    if(total[i] === '7'){
+      sum += 6
+    } 
+  }
+  return sum
+}

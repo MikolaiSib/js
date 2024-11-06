@@ -1,0 +1,11 @@
+function arithmeticSequenceElements(a,r,n) {
+  let arr = []
+  for(let i = a; i < 999; i += r){
+    arr.push(i)
+    if(arr.length === n){
+      break
+    }
+  }
+  return arr.join(', ')
+  //your code here
+}

@@ -1,0 +1,14 @@
+function product (string) {
+  let count1 = 0
+  let count2 = 0
+  for(let i = 0; i<string.length; i++){
+    if(string[i] === '!'){
+      count1 += 1
+    }
+    if(string[i] === '?'){
+      count2 += 1
+    }
+  }
+  //coding and coding....
+  return count1 * count2;
+}

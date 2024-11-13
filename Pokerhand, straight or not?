@@ -1,0 +1,16 @@
+function isStraight(cards){
+  const arr = [...new Set(cards.sort((a, b) => a - b))]
+  if(arr.includes(14)){
+    arr.unshift(1)
+  }
+  for(let i = 0; i < arr.length - 4; i++){
+    if( arr[i] === arr[i+1] - 1 
+       &&  arr[i] === arr[i+2] - 2 
+       && arr[i] === arr[i+3] - 3 
+       && arr[i] === arr[i+4] - 4 
+      ){
+      return true
+    }
+  }
+  return false
+}

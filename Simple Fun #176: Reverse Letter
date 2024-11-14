@@ -1,0 +1,11 @@
+function reverseLetter(str) {
+  let resStr = ''
+  for(let i = str.length - 1; i >= 0; i-- ){
+    let tmp = str[i].charCodeAt(0)
+    if(tmp >= 97 && tmp <= 122){
+      resStr += str[i]
+    }
+  }
+  return resStr
+  //coding and coding..
+}

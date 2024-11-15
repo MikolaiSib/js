@@ -1,0 +1,26 @@
+function calorie (member){
+  const rmrAll = 10 * member[4] + 6.25 * member[3] - 5 * member[2]
+  let rmr 
+  if(member[1] === 'm' ){
+    rmr = rmrAll + 5
+  }
+  if(member[1] === 'f' ){
+    rmr = rmrAll - 161
+  }
+  let activityFactor
+  if(member[5] ===  'little activity'){
+    activityFactor = 1.2
+  }
+  if(member[5] ===  'moderately active'){
+    activityFactor = 1.55
+  }
+  if(member[5] ===  'very active'){
+    activityFactor = 1.7
+  }
+  if(member[5] ===  'extremely active'){
+    activityFactor = 1.9
+  }
+  const kcal = (Math.round(rmr * activityFactor * 100)/ 100).toFixed(2)
+  return member[0] + '´s daily calorie requirement is ' + kcal + ' kcal.'
+  //code here
+}

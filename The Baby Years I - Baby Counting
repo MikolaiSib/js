@@ -1,0 +1,32 @@
+function babyCount(x) {
+  const s = x.toLowerCase()
+  const obj ={}
+   for(let i = 0; i < s.length; i++){
+     if(obj.hasOwnProperty(s[i])){
+       obj[s[i]] += 1
+     }
+     else {
+       obj[s[i]] = 1
+     }
+   }
+   if(!obj.hasOwnProperty('a')){
+    return 'Where\'s the baby?!'
+  }
+  if(!obj.hasOwnProperty('b')){
+    return 'Where\'s the baby?!'
+  }
+  if(!obj.hasOwnProperty('y')){
+    return 'Where\'s the baby?!'
+  }
+  
+  if(obj.b % 2 === 1){
+    obj.b -= 1
+  }
+  obj.b /= 2
+  let res = Math.min(obj.a, obj.b, obj.y)
+  if(res === 0){
+    return 'Where\'s the baby?!'
+  }
+  return res
+  // good luck - you'll need it!
+}

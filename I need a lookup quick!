@@ -1,0 +1,7 @@
+Array.prototype.toDictionary = function (keyFn, valueFn) {
+  const obj = {}
+  for(let i = 0; i < this.length; i++){
+    obj[keyFn(this[i])] = valueFn ? valueFn(this[i]) : this[i] 
+  }
+  return obj
+}

@@ -1,0 +1,15 @@
+function noonerize(numbers) {
+  if(typeof numbers[0] !== 'number' || typeof numbers[1] !== 'number'){
+    return "invalid array"
+  }
+  const numStr1 = numbers[0].toString()
+  const numStr2 = numbers[1].toString()
+  const num1 = Number(numStr2.slice(0 ,1) + numStr1.slice(1))
+  const num2 = Number(numStr1.slice(0 ,1) + numStr2.slice(1))
+  const res = num1 - num2
+  if(res < 0){
+    return res * -1
+  }
+  return res
+  // ...mathoonerize, maybe?
+}

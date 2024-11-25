@@ -1,0 +1,26 @@
+var scoreToTally = function(score){
+  let resScre = score
+  const obj = {
+    1: 'a',
+    2: 'b',
+    3: 'c',
+    4: 'd',
+    5: 'e',
+  }
+  if(score === 5){
+    return obj[score] + ' <br>'
+  }
+  if(score < 6){
+    return obj[score] //+ ' <br>'
+  }
+  let resArr = []
+  for(let i = 0; i < 99999; i++){
+    if(resScre < 5){
+      break
+    }
+    resScre -= 5
+    resArr.push('e')
+  }
+  resArr.push(obj[resScre])
+  return resArr.join(' <br>')
+}

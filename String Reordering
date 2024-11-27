@@ -1,0 +1,6 @@
+function sentence(List) {
+  const arr = List.map(e => Object.entries(e))
+  arr.sort((a, b) => Number(a[0][0]) - Number(b[0][0]))
+  return arr.flat(1).map(e => e[1]).join(' ')
+  // your code
+}

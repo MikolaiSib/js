@@ -1,0 +1,23 @@
+function arrayConversion(arr) {
+  let resArr = [...arr]
+  const len = arr.length
+  for(let i = 1; i <= len; i++){
+    let tmpArr = []
+    if(resArr.length === 1){
+      return resArr[0]
+    }
+    if(i % 2 === 1){
+      for(let j = 0; j < resArr.length; j++){
+        tmpArr.push(resArr[j] + resArr[j+1])
+        j++
+      }
+    } else {
+      for(let j = 0; j < resArr.length; j++){
+        tmpArr.push(resArr[j] * resArr[j+1])
+        j++
+      }
+    }
+    resArr = tmpArr
+  }
+  //coding and coding..
+}

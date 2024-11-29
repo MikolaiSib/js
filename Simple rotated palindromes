@@ -1,0 +1,17 @@
+function solve(st){
+  const len = st.length
+  for(let i = 0; i < len; i++){
+    let tmp = st.slice(i) + st.slice(0, i) 
+    if(len % 2 === 1){
+      if(tmp.slice(0, len/2) === tmp.slice(len/2 + 1).split('').reverse().join('')){
+        return true
+      }
+    } else {
+      if(tmp.slice(0, len/2) === tmp.slice(len/2).split('').reverse().join('')){
+        return true
+      }
+    }
+  }
+    return false
+    //..
+}

@@ -1,0 +1,26 @@
+const transform = (s) => {
+  let resStr = ''
+  const arr = []
+  const countSymbols = (str, symbol) => {
+    let count = 0
+    for(let i = 0; i < str.length; i++){
+      if(str[i] === symbol){
+        count += 1
+      }
+    }
+    return count
+  }
+  for(let i = 0; i < s.length; i++){
+    if(arr.includes(s[i])){
+      continue
+    }
+    let tmpCount = countSymbols(s.slice(i+1), s[i])
+    if(tmpCount){
+      resStr += s[i] + (tmpCount + 1)
+      arr.push(s[i])
+    } else {
+      resStr += s[i] 
+    }
+  }
+  return resStr;
+}

@@ -1,0 +1,21 @@
+function sortDict(dict) {
+  let arr = Object.entries(dict)
+  if(isNaN(arr[0][0])){
+    return arr.sort((a, b) => {
+    if(a[1] <= b[1]){
+      return 1
+    } else {
+      return -1
+    }
+  })
+  }
+  // ...
+  arr.sort((a, b) => {
+    if(a[1] < b[1]){
+      return 1
+    } else {
+      return -1
+    }
+  })
+  return arr.map(e => [Number(e[0]), e[1]])
+}

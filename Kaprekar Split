@@ -1,0 +1,11 @@
+function kaprekarSplit(n){
+  const pow = n**2
+  const str = pow.toString()
+  for(let i = 0; i < str.length; i++){
+    if(Number(str.slice(0, i)) + Number(str.slice(i)) === n){
+      return i
+    }
+  }
+  return -1
+  //write code here...
+}

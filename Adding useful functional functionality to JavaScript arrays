@@ -1,0 +1,11 @@
+Array.range = function(start, count) {
+  const res = []
+  for(let i = start; i < start + count; i++){
+    res.push(i)
+  }
+  return res
+}
+
+Array.prototype.sum = function() {
+  return this.reduce((acc, el) => acc+el, 0);
+}

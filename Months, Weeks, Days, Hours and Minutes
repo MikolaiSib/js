@@ -1,0 +1,67 @@
+function displayValue(value) {
+  let month = 0
+  let week = 0
+  let day = 0
+  let hour = 0
+  let minute = 0
+  for(let i = 0; i < 9999; i++){
+    if(value >= 60 * 24 * 7 * 4){
+       month += 1
+       value -= 60 * 24 * 7 * 4
+    } else if(value >= 60 * 24 * 7){
+       week += 1
+       value -= 60 * 24 * 7
+    } else if(value >= 60 * 24 ){
+       day += 1
+       value -= 60 * 24 
+    } else if(value >= 60 ){
+       hour += 1
+       value -= 60 
+    } else {
+      minute = value
+      break
+    }
+  }
+  let monthStr = ''
+  let weekStr = ''
+  let dayStr = ''
+  let hourStr = ''
+  let minuteStr = ''
+  if(month >= 1){
+    if(month === 1){
+      monthStr = "1 month"
+    } else {
+      monthStr = month + " months"
+    }
+  }
+  if(week >= 1){
+    if(week === 1){
+      weekStr = "1 week"
+    } else {
+      weekStr = week + " weeks"
+    }
+  }
+  if(day >= 1){
+    if(day === 1){
+      dayStr = "1 day"
+    } else {
+      dayStr = day + " days"
+    }
+  }
+  if(hour >= 1){
+    if(hour === 1){
+      hourStr = "1 hour"
+    } else {
+      hourStr = hour + " hours"
+    }
+  }
+  if(minute >= 1){
+    if(minute === 1){
+      minuteStr = "1 minute"
+    } else {
+      minuteStr = minute + " minutes"
+    }
+  }
+  return ((((monthStr + ' ' + weekStr).trim() + ' ' + dayStr).trim() + ' ' + hourStr).trim() + ' ' + minuteStr).trim()
+  //insert code
+}

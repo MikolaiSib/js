@@ -1,0 +1,13 @@
+function isolateIt(arr){
+  const resArr = []
+  for(let i = 0; i < arr.length; i++){
+    let len = arr[i].length
+    if(len % 2 === 1){
+      resArr.push(arr[i].slice(0, len/2) + '|' + arr[i].slice(len/2 + 1))
+    } else {
+      resArr.push(arr[i].slice(0, len/2) + '|' + arr[i].slice(len/2))
+    }
+  }
+  return resArr
+  //coding here...
+}

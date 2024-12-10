@@ -1,0 +1,13 @@
+function spinAround(turns) {
+  let res = 0
+  for(let i = 0; i < turns.length; i++){
+    if(turns[i] === 'right'){
+      res += 90
+    } else if(turns[i] === 'left'){
+      res -= 90
+    }
+  }
+  const countRotations  = Math.floor(Math.abs(res) / 360)
+  return countRotations
+  // Here be dragons!
+}

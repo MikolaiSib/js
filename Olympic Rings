@@ -1,0 +1,21 @@
+function olympicRing(a){
+  let count = 0
+  for(let i = 0; i<a.length; i++){
+    if(a[i] === 'a' || a[i] === 'A' || a[i] === 'b' || a[i] === 'd' || a[i] === 'D' || a[i] === 'e' || a[i] === 'g' || a[i] === 'o' || a[i] === 'O' || a[i] === 'p' || a[i] === 'P' || a[i] === 'q' || a[i] === 'Q' || a[i] === 'R'){
+      count += 1
+    }
+    if(a[i] === 'B'){
+      count += 2
+    }
+  }
+  const resCount = Math.floor(count/2)
+  if(resCount <= 1){
+    return 'Not even a medal!' 
+  } else if(resCount > 3){
+    return 'Gold!' 
+  } else if(resCount === 3){
+    return 'Silver!'
+  } else if(resCount === 2){
+    return 'Bronze!'
+  }
+}

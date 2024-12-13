@@ -1,0 +1,16 @@
+function correct(leaderBoard){
+  const arr = leaderBoard.split('#')
+  const resArr = []
+  const oldLeader = arr[1].slice(2)
+  for(let i = 2; i < arr.length; i++){
+    if(arr[i].includes('myjinxin2015')){
+      resArr.push(arr[i].split(' ')[0] + ' ' + oldLeader)
+    } else {
+      resArr.push(arr[i])
+    }
+  }
+  resArr.unshift('#1 myjinxin2015\n')
+  const resStr = resArr.join('#')
+  return (resStr + ' ').trim()
+  //Happy Coding ^_^
+}

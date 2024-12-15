@@ -1,0 +1,33 @@
+function stringsConstruction(A, B) {
+  const objA ={}
+  for(let i = 0; i < A.length; i++){
+    if(objA.hasOwnProperty(A[i])){
+      objA[A[i]] += 1
+    }
+    else {
+      objA[A[i]] = 1
+    }
+  }
+  const objB ={}
+  for(let i = 0; i < B.length; i++){
+    if(objB.hasOwnProperty(B[i])){
+      objB[B[i]] += 1
+    }
+    else {
+      objB[B[i]] = 1
+    }
+  }
+  let res = 99999
+  const keyAs = Object.keys(objA)
+  for(let i = 0; i < keyAs.length; i++){
+    if(!objB.hasOwnProperty(keyAs[i])){
+      return 0
+    }
+    let tmp = Math.floor(objB[keyAs[i]]/objA[keyAs[i]])
+    if(tmp < res){
+      res = tmp
+    }
+  }
+  return res === 99999 ? 0 : res
+  //coding and coding..
+}

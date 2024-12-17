@@ -1,0 +1,10 @@
+function rounding(n, m) {
+  const num = n/m
+  const maxNum = Math.ceil(num) * m
+  const minNum = Math.floor(num) * m
+  if(maxNum - n === n - minNum ){
+    return n
+  }
+  return maxNum - n > n - minNum ? minNum : maxNum
+  //coding and coding..
+}

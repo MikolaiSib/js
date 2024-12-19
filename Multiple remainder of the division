@@ -1,0 +1,9 @@
+function isMultiple(a, b, n) {
+  const div = Number((a/b).toFixed(2))
+  const divFull = Math.round((div - Math.floor(div))*10)/10
+  if(divFull === 0 || divFull === 1){
+    return false
+  }
+  return divFull * 10 % n === 0
+  // good luck
+}

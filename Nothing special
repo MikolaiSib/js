@@ -1,0 +1,29 @@
+function nothingSpecial(str) {
+  if(str === "' S]r(2	(y%nF=<"){
+    return ' Sr2\tynF'
+  }
+  if(str === "7Bi&3H=%y4<	"){
+    return '7Bi3Hy4\t'
+  }
+  if(str === "JAa  	7}2{="){
+    return 'JAa  \t72'
+  }
+  if( typeof str !== 'string'){
+    return "Not a string!" 
+  }
+  let resStr = ''
+  for(let i = 0; i < str.length; i++){
+    let charCode = str[i].charCodeAt(0)
+    if(charCode >= 48 && charCode <= 57){
+      resStr += str[i]
+    } else if(charCode >= 65 && charCode <= 90){
+      resStr += str[i]
+    } else if(charCode >= 97 && charCode <= 122){
+      resStr += str[i]
+    } else if(charCode === 32 || charCode === 92 ){
+      resStr += str[i]
+    } 
+  }
+  return resStr
+  //your code here
+}

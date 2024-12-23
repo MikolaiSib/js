@@ -1,0 +1,15 @@
+function solve(s) {
+  let numRes = 0
+  let tmpNum = ''
+  for(let i = 0; i < s.length; i++){
+    if(!isNaN(parseInt(s[i]))){
+      tmpNum += s[i]
+    } else {
+      tmpNum = ''
+    }
+    if(Number(tmpNum) > numRes){
+      numRes = Number(tmpNum)
+    }
+  }
+  return numRes
+};

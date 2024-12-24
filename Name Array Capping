@@ -1,0 +1,8 @@
+function capMe(names) {
+  const resArr =[]
+  for(let i = 0; i < names.length; i++){
+    let tmpStr = names[i].slice(0, 1).toUpperCase() + names[i].slice(1).toLowerCase()
+    resArr.push(tmpStr)
+  }
+  return resArr
+}

@@ -1,0 +1,23 @@
+function decipher(codedMessage){
+  let resStr = ''
+  for(let i = 0; i < codedMessage.length; i++){
+    let charCode = codedMessage[i].charCodeAt(0)
+      if(charCode >= 65 && charCode <= 90){
+        let tmp = charCode + 7
+        if(tmp > 90){
+          tmp -= 26
+        }
+        resStr += String.fromCharCode(tmp)
+      } else if(charCode >= 97 && charCode <= 122){
+        let tmp = charCode + 7
+        if(tmp > 122){
+          tmp -= 26
+        }
+        resStr += String.fromCharCode(tmp)
+      } else {
+        resStr += codedMessage[i]
+      }
+  }
+  return resStr
+  //your code here
+}

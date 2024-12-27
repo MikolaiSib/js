@@ -1,0 +1,14 @@
+function zipvalidate(postcode){
+  if(postcode.length !== 6){
+    return false
+  }
+  const reg = /^\d+$/;
+  if(!reg.test(postcode)){
+    return false
+  }
+  if(postcode[0] === '0' || postcode[0] === '5' || postcode[0] === '7' || postcode[0] === '8' || postcode[0] === '9'){
+    return false
+  }
+  return true
+  // ...
+}

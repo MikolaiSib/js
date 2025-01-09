@@ -1,0 +1,22 @@
+function sayMeOperations(str) {
+  let arr = str.split(' ').map(e => Number(e))
+  let res = []
+  for(let i = 0; i < arr.length - 2; i++){
+    if(arr[i] + arr[i+1] === arr[i+2]){
+      res.push('addition')
+    }
+    else if(arr[i] - arr[i+1] === arr[i+2]){
+      res.push('subtraction')
+    }
+    else if(arr[i] * arr[i+1] === arr[i+2]){
+      res.push('multiplication')
+    }
+    else if(arr[i] / arr[i+1] === Math.floor(arr[i+2])){
+      res.push('division')
+    } 
+    else {
+      res.push('division')
+    }
+  }
+  return res.join(', ');
+}

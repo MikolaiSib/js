@@ -1,0 +1,14 @@
+function arrayManip(array){
+  const arrRes = []
+  for(let i = 0; i < array.length; i++){
+    let maxArr = array.slice(i).filter(e => e > array[i])
+    if(maxArr.length === 0){
+      arrRes.push(-1)
+    } else {
+      let tmp = Math.min(...maxArr)
+      arrRes.push(tmp)
+    }
+  }
+  return arrRes
+  // your code goes here
+}

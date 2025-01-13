@@ -1,0 +1,18 @@
+function coolString(s) {
+  if(s.length === 1){
+    return false
+  }
+  for(let i = 0; i < s.length - 1; i++){
+    let charCode1 = s[i].charCodeAt(0)
+    let charCode2 = s[i + 1].charCodeAt(0)
+    if((charCode1 >= 65 && charCode1 <= 90) && (charCode2 >= 97 && charCode2 <= 122)){
+      continue
+    } else if((charCode2 >= 65 && charCode2 <= 90) && (charCode1 >= 97 && charCode1 <= 122)){
+      continue
+    } else {
+      return false
+    }
+  }
+  return true
+  //coding and coding..
+}

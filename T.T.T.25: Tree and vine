@@ -1,0 +1,6 @@
+function lengthOfVine(n,height,radius){
+  const circleHeight = 2 * Math.PI * radius
+  const one = height/n
+  return Math.round(((circleHeight**2 + one**2) ** 0.5) * n * 100) / 100
+  //coding here...
+}

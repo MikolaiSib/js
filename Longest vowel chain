@@ -1,0 +1,15 @@
+function solve(s){
+  let count = 0
+  let resCount = 0
+  for(let i = 0; i < s.length; i++){
+    if(s[i] === 'o' || s[i] === 'e' || s[i] === 'a' || s[i] === 'i' || s[i] === 'u'){
+      count += 1
+    } else {
+      count = 0
+    }
+    if(resCount < count){
+      resCount = count
+    }
+  }
+  return resCount
+}

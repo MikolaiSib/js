@@ -1,0 +1,6 @@
+function vampireTest(a, b) {
+  const prod = (a * b).toString().split('').sort().join('')
+  const sum = (a.toString() + b.toString()).split('').sort().join('')
+  return prod === sum
+  // fix me
+}

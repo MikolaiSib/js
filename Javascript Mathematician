@@ -1,0 +1,13 @@
+function curry(f) { // curry(f) выполняет каррирование
+  return function(...a) {
+    return function(...b) {
+      return f([...a].reduce((acc, el) => acc + el, 0), [...b].reduce((acc, el) => acc + el, 0));
+    };
+  };
+}
+
+function sum(a, b) {
+  return a + b;
+}
+
+let calculate = curry(sum);

@@ -1,0 +1,15 @@
+function seqToOne(n){
+  let arr = []
+  if(n<1){
+    for(let i = n; i <= 1; i++){
+      arr.push(i)
+    }
+  }
+  else{
+    for(let i = n; i >= 1; i--){
+      arr.push(i)
+    }
+  }
+  return arr
+  //your code here
+}

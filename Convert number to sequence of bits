@@ -1,0 +1,15 @@
+Number.prototype.toBits = function(length) {
+  let len = 8
+  if(length){
+    len = length
+  }
+  if(length === 0){
+    len = 1
+  }
+  const numBin = this.toString(2)
+  if(numBin.length > len){
+    return numBin
+  }
+  const repeatZero = '0'.repeat(len - numBin.length)
+  return repeatZero + numBin
+}

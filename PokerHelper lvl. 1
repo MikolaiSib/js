@@ -1,0 +1,44 @@
+function isPair(hole, flop){
+  const allCard = [...hole, ...flop].map(e => e.val)
+  const obj = {}
+  for(let i = 0; i < allCard.length; i++){
+    if(obj.hasOwnProperty(allCard[i])){
+      obj[allCard[i]] += 1
+    }
+    else {
+      obj[allCard[i]] = 1
+    }
+  }
+  return Object.values(obj).filter(e => e >= 2).length !== 0
+  //write code here
+}
+
+function isTwoPair(hole, flop) {
+  const allCard = [...hole, ...flop].map(e => e.val)
+  const obj = {}
+  for(let i = 0; i < allCard.length; i++){
+    if(obj.hasOwnProperty(allCard[i])){
+      obj[allCard[i]] += 1
+    }
+    else {
+      obj[allCard[i]] = 1
+    }
+  }
+  return Object.values(obj).filter(e => e >= 2).length > 1
+  //write code here
+}
+
+function isSet(hole, flop) {
+  const allCard = [...hole, ...flop].map(e => e.val)
+  const obj = {}
+  for(let i = 0; i < allCard.length; i++){
+    if(obj.hasOwnProperty(allCard[i])){
+      obj[allCard[i]] += 1
+    }
+    else {
+      obj[allCard[i]] = 1
+    }
+  }
+  return Object.values(obj).filter(e => e >= 3).length !== 0
+  //write code here
+}

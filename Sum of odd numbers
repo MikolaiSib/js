@@ -1,0 +1,19 @@
+function rowSumOddNumbers(n) {
+  if(n === 1){
+    return 1
+  }
+  let m = 2
+  const res = []
+  let count = 0
+  for(let i = 1; count < n; i+=m){
+    res.push(i)
+    m+=2
+    count += 1
+  }
+  let sum = 0
+  for(let i = res[res.length -2] + 2; i <= res[res.length -1]; i+=2){
+    sum += i
+  }
+  return sum
+	// TODO
+}

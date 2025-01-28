@@ -1,0 +1,20 @@
+function dayPlan (hours, tasks, duration){
+  if(tasks === 0){
+    return []
+  }
+  const minutes = hours * 60
+  const freeTime = Math.round((minutes - tasks * duration)/(tasks - 1))
+  if(freeTime < 0){
+    return 'You\'re not sleeping tonight!'
+  }
+  const resArr = []
+  for(let i = 0; i < tasks*2-1; i++){
+    if(i%2 === 0){
+      resArr.push(duration)
+    } else {
+      resArr.push(freeTime)
+    }
+  }
+  return resArr
+  // Write your code in here!
+}

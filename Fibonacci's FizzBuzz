@@ -1,0 +1,24 @@
+var fibsFizzBuzz = function(n) {
+  let fib1 = 1
+  let fib2 = 1
+  let arrRes = []
+  for(let i = 0; i < n; i++){
+    if(fib1%3 === 0 && fib1%5 === 0){
+      arrRes.push('FizzBuzz')
+    }
+    else if(fib1%3 === 0){
+      arrRes.push('Fizz')
+    }
+    else if(fib1%5 === 0 ){
+      arrRes.push('Buzz')
+    }
+    else{
+      arrRes.push(fib1)
+    }
+    let tmpFib = fib1
+    fib1 = fib2
+    fib2 = tmpFib + fib1
+  }
+  return arrRes
+    // Your code here.
+}

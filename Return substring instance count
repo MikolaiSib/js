@@ -1,0 +1,11 @@
+function solution(fullText, searchText){
+  let count = 0
+  let len = searchText.length
+  for(let i = 0; i < fullText.length; i++){
+    if(fullText.slice(i, i + len) === searchText){
+      i += len - 1
+      count += 1
+    }
+  }
+  return count
+}

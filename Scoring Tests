@@ -1,0 +1,18 @@
+function scoreTest(str, right, omit, wrong){
+  let res1 = 0
+  let res2 = 0
+  let res3 = 0
+  for(let i = 0; i < str.length; i++){
+    if(str[i] === 0){
+      res1 += right
+    }
+    if(str[i] === 1){
+      res2 += omit
+    }
+    if(str[i] === 2){
+      res3 -= wrong
+    }
+  }
+  return res1 + res2 + res3
+  //insert code here
+}

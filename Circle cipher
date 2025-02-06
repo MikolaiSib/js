@@ -1,0 +1,29 @@
+function encode(s) {
+  let resStr = ''
+  if(s.length%2 === 0){
+    for(let i = 0; i < s.length/2; i++){
+      resStr += s[i]
+      resStr += s[s.length - i - 1]
+    }
+  } else{
+    for(let i = 0; i < s.length/2 - 1; i++){
+      resStr += s[i]
+      resStr += s[s.length - i - 1]
+    }
+    resStr += s[s.length/2 - 0.5]
+  }
+  return resStr
+}
+
+function decode(s) {
+  let resStr1 = ''
+  let resStr2 = ''
+  for(let i = 0; i < s.length; i++){
+    if(i%2 === 0){
+      resStr1 += s[i]
+    } else {
+      resStr2 = s[i] + resStr2
+    }
+  }
+  return resStr1 + resStr2
+}

@@ -1,0 +1,8 @@
+function sumCircles() {
+  let arr = [...arguments]
+  let totalArea = 0
+  for(let i = 0; i < arr.length; i++){
+    totalArea += Math.PI * (arr[i]/2)**2
+  }
+  return 'We have this much circle: ' + Math.round(totalArea)
+}

@@ -1,0 +1,13 @@
+function curry(f) { // curry(f) выполняет каррирование
+  return function(a) {
+    return function(b) {
+      return f(a, b);
+    };
+  };
+}
+
+function prod(a, b) {
+  return a.map(e => e*b)
+}
+
+let multiplyAll = curry(prod);

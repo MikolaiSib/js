@@ -1,0 +1,16 @@
+function sumTriangularNumbers(n) {
+  if(n < 0){
+    return 0
+  }
+  let sum = 1
+  let m = 2
+  let count = 0
+  let arr = []
+  for(let i = 1; count < n - 1; i + m){
+    sum += m
+    m += 1
+    count += 1
+    arr.push(sum)
+  }
+  return arr.reduce((acc, el) => acc + el, 0) + 1
+}

@@ -1,0 +1,14 @@
+function sortByValueAndIndex(array){
+  const arr = []
+  for(let i = 0; i < array.length; i++){
+    arr.push([array[i], array[i]*(i+1)])
+  } 
+  arr.sort((a, b) => {
+    if(a[1] > b[1]){
+      return 1
+    } else{
+      return -1
+    }
+  })
+  return arr.map(e => e[0])
+}

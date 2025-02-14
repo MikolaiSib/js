@@ -1,0 +1,24 @@
+function solve(eq){
+  const sumbols = []
+  const nums = []
+  let tmpNum = ''
+  for(let i = 0; i < eq.length; i++){
+    if(eq[i] === '+' || eq[i] === '-' || eq[i] === '*' || eq[i] === '/'){
+      sumbols.push(eq[i])
+      nums.push(tmpNum)
+      tmpNum = ''
+    } else {
+      tmpNum += eq[i]
+    }
+  }
+  nums.push(tmpNum)
+  sumbols.reverse().push('')
+  nums.reverse()
+  let resStr = ''
+  for(let i = 0; i < nums.length; i++){
+    resStr += nums[i]
+    resStr += sumbols[i]
+  }
+  return resStr
+    //..
+}

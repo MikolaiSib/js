@@ -1,0 +1,13 @@
+const orderedCount = function (text) {
+  const resArr = []
+  for(let i = 0; i < text.length; i++){
+    let index = resArr.findIndex(e => e[0] === text[i])
+    if( index > -1){
+      resArr[index] = [text[i], resArr[index][1] + 1]
+    } else {
+      resArr.push([text[i], 1])
+    }
+  }
+  return resArr
+  // Implement me!
+}

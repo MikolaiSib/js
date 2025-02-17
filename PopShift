@@ -1,0 +1,16 @@
+function popShift(s){
+  let startStr = ''
+  let middleStr = ''
+  let endStr = ''
+  const len = s.length/2
+  if(s.length % 2 === 0){
+    startStr = s.slice(len).split('').reverse().join('')
+    middleStr = s.slice(0, len)
+    endStr = s.slice(len, len)
+  } else {
+    startStr = s.slice(len + 1).split('').reverse().join('')
+    middleStr = s.slice(0, len)
+    endStr = s.slice(len, len + 1)
+  }
+  return [startStr, middleStr, endStr]
+}

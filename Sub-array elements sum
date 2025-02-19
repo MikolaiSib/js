@@ -1,0 +1,14 @@
+function elementsSum(arr,d=0){
+  let sum = 0
+  let len = arr.length
+  for(let i = 0; i < len; i++){
+    let elem = arr[i][len-i-1]
+    if(elem === undefined){
+      sum += d
+    } else {
+      sum += elem
+    }
+  }
+  return sum
+  //your code here
+}

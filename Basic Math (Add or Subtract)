@@ -1,0 +1,31 @@
+function calculate(str) {
+  const arr = []
+  let tmpNum = ''
+  for(let i = 0; i < str.length; i++){
+    if(str[i] === 'p'){
+      arr.push(Number(tmpNum))
+      arr.push('+')
+      i += 3
+      tmpNum = ''
+    } else if(str[i] === 'm'){
+      arr.push(Number(tmpNum))
+      arr.push('-')
+      i += 4
+      tmpNum = ''
+    } else {
+      tmpNum += str[i]
+    } 
+  }
+  arr.push(Number(tmpNum))
+  let sum = arr[0]
+  for(let i = 1; i < arr.length; i++){
+    if(arr[i] === '+'){
+      sum += arr[i+1]
+    } else {
+      sum -= arr[i+1]
+    }
+    i += 1
+  }
+  return sum.toString()
+  //your code here...
+}

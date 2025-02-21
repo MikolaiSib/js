@@ -1,0 +1,18 @@
+function seven(m) {
+  if(m < 100){
+    return [0, 0]
+  }
+  let num = m
+  let count = 0
+  for(let i = 0; i < 999; i++){
+    let num1 = Math.trunc(num/10)
+    let num2 = num%10
+    num = num1 - num2 * 2
+    if(num < 100){
+      count = i + 1
+      break
+    }
+  }
+  return [num, count]
+    // your code
+}

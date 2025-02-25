@@ -1,0 +1,18 @@
+function racePodium(blocks) {
+  if(blocks === 7){
+    return [2, 4, 1]
+  }
+  if(blocks % 3 === 0){
+    const num = blocks/3
+    return [num, num + 1, num - 1]
+  }
+  if(blocks % 3 === 1){
+    const num = (blocks - 1)/3
+    return [num + 1, num + 2, num - 2]
+  }
+  if(blocks % 3 === 2){
+    const num = (blocks - 2)/3
+    return [num + 1, num + 2, num - 1]
+  }
+  // your code here
+}

@@ -1,0 +1,15 @@
+const ultimateReverse = s => {
+  let res = []
+  const lengths = s.map(e => e.length)
+  const reverseStr = [...s].join('').split('').reverse().join('')
+  const resArr = []
+  let startStr = 0
+  let endStr = 0
+  for(let i = 0; i < s.length; i++){
+    startStr = endStr
+    endStr += lengths[i]
+    let tmpStr = reverseStr.slice(startStr, endStr)
+    resArr.push(tmpStr)
+  }
+  return resArr
+};

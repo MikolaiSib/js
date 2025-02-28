@@ -1,0 +1,15 @@
+function oddOrEven(n) {
+  if(n === 1){
+    return 'Either'
+  }
+  if(n === 1){
+    return 'Odd'
+  }
+  if(n % 2 === 1){
+    return 'Either'
+  }
+  if((n / 2) % 2 === 0){
+    return 'Even'
+  }
+  return 'Odd' ;
+}

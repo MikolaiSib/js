@@ -1,0 +1,24 @@
+function halfIt(n){
+  if(typeof n !== 'number'){
+    return 0
+  }
+  let num = n
+  if(n<0){
+    num *= -1
+  }
+  const str = num.toString()
+  let res = ''
+  for(let i = 0; i < str.length; i++){
+    if(str[i] === '.'){
+      res += '.'
+    } else {
+      res += Math.round(Number(str[i])/2).toString()
+    }
+  } 
+  res = Number(res)
+  if(n<0){
+    res *= -1
+  }
+  return res
+  //coding and coding
+}

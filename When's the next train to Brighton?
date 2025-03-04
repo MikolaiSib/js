@@ -1,0 +1,26 @@
+function nextTrain(time, minutes){
+  let [hours, mins] = time.split(':').map(e => +e)
+  const minAdd = Number(minutes)
+  let minsAddHours = minAdd + mins + hours * 60
+  if(minsAddHours > 60 * 23.5 || minsAddHours < 60 * 5){
+    return "The next train is at 05:00."
+  }
+  let allMins = minAdd + mins
+  let resHours = hours
+  let resMins = allMins
+  if(allMins > 60){
+    let tmp = Math.trunc(allMins/60)
+    resHours += 1 * tmp
+    resMins -= 60 * tmp
+  }
+  if(resMins > 30){
+    resHours += 1
+    resMins = '00'
+  } else {
+    resMins = 30
+  }
+  if(resHours < 10){
+    resHours ='0' + resHours
+  }
+  return "The next train is at " + resHours + ":" + resMins + "."
+}

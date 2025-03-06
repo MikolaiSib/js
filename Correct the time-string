@@ -1,0 +1,37 @@
+function timeCorrect(timestring) {
+  if(!timestring){
+    return timestring
+  }
+  let arr = timestring.split(':')
+  if(arr.length !== 3){
+    return null
+  }
+  for(let i = 0; i<arr.length; i++){
+    if(isNaN(Number(arr[i]))){
+      return null
+    } 
+  }
+  let [ hour, min, sec] = arr.map(e => Number(e))
+  if(sec > 59){
+    sec = sec - 60
+    min  += 1
+  }
+  if(min > 59){
+    min = min - 60
+    hour  += 1
+  }
+  if(hour > 23){
+    let tmp = Math.trunc(hour/24)
+    hour -= 24 * tmp
+  }
+  if(sec < 10){
+      sec = '0' + sec
+  }
+  if(min < 10){
+      min = '0' + min
+  }
+  if(hour < 10){
+      hour = '0' + hour
+  }
+  return  hour + ':' + min + ':' +  sec
+}

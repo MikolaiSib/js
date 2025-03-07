@@ -1,0 +1,11 @@
+function mergeStrings(first, second){
+  for(let i = 0; i < first.length; i++){
+    let tmpFirst = first.slice(i)
+    let tmpSecond = second.slice(0, first.length - i)
+    if(tmpFirst === tmpSecond){
+      return first + second.slice(first.length - i)
+    }
+  }
+  return first + second
+  // Your solution
+}

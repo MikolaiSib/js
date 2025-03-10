@@ -1,0 +1,22 @@
+function doubles(s){
+  let deleteDouble = (str) => {
+    let resStr =''
+    for(let i = 0; i < str.length - 1; i++){
+      if(str[i] === str[i+1]){
+        i += 1
+      } else {
+        resStr += str[i]
+      }
+    }
+    if(str[str.length-2] !== str[str.length-1]){
+      resStr += str[str.length-1]
+    }
+    return resStr
+  }
+  let tmpStr = s
+  for(let i = 0; i < s.length; i++){
+    tmpStr = deleteDouble(tmpStr)
+  }
+  return tmpStr
+    //..
+}

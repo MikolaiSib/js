@@ -1,0 +1,13 @@
+function wordValue(a) {
+  let indexProdChar = (str) => {
+    let sum = 0
+    for(let i = 0; i < str.length; i++){
+      if(str[i] === ' '){
+        continue
+      }
+      sum += (str[i].charCodeAt(0) - 96)
+    }
+    return sum
+  } 
+  return a.map((e, i) => indexProdChar(e) * (i+1))
+}

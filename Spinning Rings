@@ -1,0 +1,18 @@
+function spinningRings(innerMax, outerMax) {
+  let inner = innerMax
+  let outer = 1
+  for(let i = 0; i < 99999; i++){
+    if(inner === outer){
+      return i+1
+    }
+    inner -= 1
+    outer += 1
+    if(inner < 0){
+      inner = innerMax
+    }
+    if(outer > outerMax){
+      outer = 0
+    }
+  }
+  // your code here
+};

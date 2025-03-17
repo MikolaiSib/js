@@ -1,0 +1,11 @@
+function findNextPower(val, pow_) {
+  let num = val**(1/pow_)
+  num += 0.00001
+  if(Math.ceil(num) === num){
+    num += 1
+  } else {
+    num = Math.ceil(num)
+  }
+  return num ** pow_
+    //your code here
+}

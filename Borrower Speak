@@ -1,0 +1,11 @@
+function borrow(s){
+  let strRes = ''
+  for(let i = 0; i < s.length; i++){
+    let tmp = s[i].toLowerCase()
+    let tmpCharCode = tmp.charCodeAt(0)
+    if(tmpCharCode >= 97 && tmpCharCode <= 122){
+      strRes += tmp
+    }
+  }
+  return strRes
+}

@@ -1,0 +1,17 @@
+function sortByArea(array) {
+  const arr = []
+  for(let i = 0; i < array.length; i++){
+    if(typeof array[i] === 'number'){
+      arr.push([array[i], array[i]**2 * Math.PI])
+    } else {
+      arr.push([array[i], array[i][0] * array[i][1]])
+    }
+  }
+  return arr.sort((a, b) => {
+    if(a[1] < b[1]){
+      return -1
+    } else {
+      return 1
+    }
+  }).map(e => e[0])
+}

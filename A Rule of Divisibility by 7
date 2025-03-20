@@ -14,5 +14,4 @@ function seven(m) {
     }
   }
   return [num, count]
-    // your code
 }

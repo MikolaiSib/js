@@ -1,0 +1,9 @@
+function maxMin(arr1,arr2){
+  const resArr = []
+  for(let i = 0; i < arr1.length; i ++){
+    resArr.push(Math.abs(arr1[i] - arr2[i]))
+    resArr.push(Math.abs(arr2[i] - arr1[i]))
+  }
+  return [Math.max(...resArr), Math.min(...resArr),]
+  //coding here...
+}

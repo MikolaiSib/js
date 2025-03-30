@@ -1,0 +1,17 @@
+var numberToMoney = function(n) {
+  const num = (Math.trunc(n * 100)/100).toString()
+  let [start, end] = num.split('.')
+  let startRes = ''
+  for(let i = 0; i < start.length; i++){
+    if((start.length - i - 1) % 3 === 0 && i != start.length - 1){
+      startRes +=  start[i] + ','  
+    } else {
+      startRes += start[i]
+    }
+    
+  }
+  if(end === undefined){
+    return startRes
+  }
+  return startRes + '.' + end
+};

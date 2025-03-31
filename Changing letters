@@ -1,0 +1,27 @@
+function swap (string) {
+  let resStr = ''
+  for(let i = 0; i < string.length; i++){
+    let tmpCharCode = string[i].charCodeAt(0)
+    if((tmpCharCode >= 65 && tmpCharCode <= 90) || (tmpCharCode >= 97 && tmpCharCode <= 122)){
+      if(
+         string[i] === 'a' 
+         || string[i] === 'A' 
+         || string[i] === 'e' 
+         || string[i] === 'E'
+         || string[i] === 'o'
+         || string[i] === 'O'
+         || string[i] === 'i'
+         || string[i] === 'I'
+         || string[i] === 'u'
+         || string[i] === 'U'
+        ){
+        resStr += string[i].toUpperCase()
+      } else {
+      resStr += string[i]
+    }
+    } else {
+      resStr += string[i]
+    }
+  }
+  return resStr;
+}

@@ -1,0 +1,19 @@
+function sctc(sin){
+  const resSin = Math.round(sin * 100)/100
+  const cos = (1 - sin**2)**0.5 
+  const resCos = Math.round(cos * 100)/100
+  const tan = sin/cos 
+  const resTan = Math.round(tan * 100)/100
+  const ctan = Math.round(1/tan * 100)/100
+  if(tan === Infinity && ctan === Infinity){
+    return [resSin, resCos]
+  }
+  if(tan === Infinity){
+    return [resSin, resCos, ctan]
+  }
+  if(ctan === Infinity){
+    return [resSin, resCos, resTan]
+  }
+  return [resSin, resCos, resTan, ctan]
+  //your code here
+}

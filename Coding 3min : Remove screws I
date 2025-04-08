@@ -1,0 +1,10 @@
+function sc(screws){
+  let allTime = 0
+  for(let i = 0; i < screws.length - 1; i++){
+    allTime += 2
+    if(screws[i] != screws[i+1]){
+      allTime += 5
+    }
+  }
+  return allTime + 1
+}

@@ -1,0 +1,11 @@
+function solve(nums, div) {
+  if(nums.length === 0){
+    return []
+  }
+  const resNums = []
+  for(let i = 0; i < nums.length; i++){
+    let tmpRemainder = nums[i] % div
+    resNums.push(nums[i] + tmpRemainder)
+  }
+  return resNums
+}

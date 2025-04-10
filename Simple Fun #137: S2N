@@ -1,0 +1,12 @@
+function S2N(m, n) {
+  let sum = 0
+  for(let i = 0; i <= n ; i++){
+    let sumPow = 0
+    for(let j = 0; j <= m ; j++){
+      sumPow += j**i
+    }
+    sum += sumPow
+  }
+  return sum
+  //coding and coding..
+}

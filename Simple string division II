@@ -1,0 +1,16 @@
+function solve(s,k) {
+  let count = 0
+  const arr = s.split(' ')
+  for(let i = 0; i < arr.length; i++){
+    for(let j = 0; j < arr.length; j++){
+      if(i === j){
+        continue
+      }
+      if(Number(arr[i] + arr[j]) % k === 0){
+        count += 1
+      }
+    }
+  }
+  return count
+    //..
+}

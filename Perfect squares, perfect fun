@@ -1,0 +1,18 @@
+function squareIt(int) {
+  if(int < 10){
+    return int.toString()
+  }
+  const square = int.toString().length**0.5
+  if(square != Math.round(square)){
+    return 'Not a perfect square!';
+  }
+	let res = ''
+  const str = int.toString()
+  for(let i = 0; i < str.length; i++){
+    if(i % square === 0 && i != 0){
+      res += '\n'
+    }
+    res += str[i]
+  }
+  return res
+}
